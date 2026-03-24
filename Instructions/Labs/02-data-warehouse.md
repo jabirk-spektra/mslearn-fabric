@@ -147,9 +147,9 @@ In this task, you will create a relational data warehouse consisting of fact and
 
     ![](./Images/E2T3S1.png)
 
-1. Click on **Open semantic model**, from the toolbar on the top. 
+1. From the toolbar at the top, click **Open**.
 
-    ![](./Images/upE2T3S2.png)
+    ![](./Images/E1T8P4.png)
 
 1. In the top right corner, click on **Viewing (1)** drop-down and select **Editing (2)**.
 
