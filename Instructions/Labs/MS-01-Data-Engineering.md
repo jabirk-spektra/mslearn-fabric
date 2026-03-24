@@ -73,8 +73,7 @@ In this task, you will create a Fabric workspace. The workspace will contain all
 
     ![](./Images/powerbi-add-ppl.png)
 
-1. In the **Add people** pane, paste the SPN  
-`https://aec-svc/` **(1)**, then select the **Admin (2)**, and click **Add (3)**.
+1. In the **Add people** pane, paste the SPN `https://aec-svc/` **(1)**, then select the **Admin (2)**, and click **Add (3)**.
 
      ![](./Images/spn-01.png)
 
