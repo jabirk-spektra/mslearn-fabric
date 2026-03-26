@@ -251,6 +251,17 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
     
     ![](./Images/E3T4S7-1208.png)
 
+>Note: If you encounter an error indicating that the IOTDeviceData table is not found after running the above command, execute the command below to create the table. Once the table is created, re-run the previous step :
+`SELECT * FROM IOTDeviceData;`
+
+```SQL
+%%sql
+
+CREATE TABLE iotdevicedata
+USING DELTA
+LOCATION 'Tables/dbo/iotdevicedata';
+```
+
 1. Add a new code cell by clicking on **+ Code**. Add the following code and click on the run cell icon. This code writes more hypothetical device data to the streaming source.
 
     ```python

@@ -115,6 +115,8 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 1. Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
 
+>Note: **If you face any error stating "Too many Requests for Capacity with error code 430"(1), navigate to Monitor(2) section to see if there are any ongoing spark jobs running if yes we can wait for it to finish or stop the process.**
+
 ## Task 3: Load data into a dataframe
 
 In this task, you will load data into a dataframe to prepare it for analysis. Dataframes in Spark, similar to Pandas dataframes in Python, offer a structured way to manage and manipulate data organized in rows and columns.
@@ -447,7 +449,7 @@ While it's useful to be able to embed SQL statements into a cell containing PySp
 
        ![](./Images/p6t7.2p2.png)
 
-        > **Note:** For more information about Spark SQL and dataframes, see the [Spark SQL documentation](https://spark.apache.org/docs/2.2.0/sql-programming-guide.html).
+        > **Note:** For more information about Spark SQL and dataframes, see the [Spark SQL documentation](https://spark.apache.org/docs/latest/sql-programming-guide.html).
 
 ## Task 8: Visualize data with Spark
 
