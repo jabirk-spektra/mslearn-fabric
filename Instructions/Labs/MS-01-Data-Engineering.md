@@ -37,9 +37,9 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
     ![](./Images/p1t1p4.png)
 
-1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right again, and verify **Trial Status (2)**.
+1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right again, and verify **Fabric and Power BI trial status (2)**.
 
-    ![Account-manager-start](./Images/img-01.png)
+    ![Account-manager-start](./Images/img-01-new.png)
 
 ## Task 2: Create a workspace
 
@@ -101,9 +101,7 @@ In this task, switch to the Data engineering experience and create a new Lakehou
 
 1. Enter the **Name** as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**. Ensure that the **Lakehouse schema** option is unchecked, as it is selected by default when creating the **Lakehouse**. Then click **Create (2)**.
 
-    ![](./Images/E1T3S5-1.png)
-
-    ![](./Images/01/E1T3S5-N.png)    
+    ![](./Images/E1T3S5-1.png)   
 
 1. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the left pane, click the **Ellipsis (...) (1)** menu for the **Files** node, click on **New subfolder (2)**.
     
@@ -129,7 +127,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
 1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
     
-    ![](./Images/Lake9.png)
+    ![](./Images/Lake9-new.png)
    
 1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant (1)**.
 
