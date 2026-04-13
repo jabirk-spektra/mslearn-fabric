@@ -175,5 +175,4 @@ Now, click on **Next** from the lower right corner to move on to the next page.
 
    ![New dataflow.](./Images/g4.png)
 
-
 ### Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
