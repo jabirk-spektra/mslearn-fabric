@@ -21,14 +21,21 @@ In this task, you'll create a new data warehouse in the Data Warehouse experienc
 
 Now that you already have a workspace, it's time to switch to the *Data Warehouse* experience in the portal and create a data warehouse.
 
-1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left panel.Then, click on **+ New Item (2)**, search for **warehouse (3)** in the search bar, and select **Warehouse (4)**.
+1. Select **Workspaces (1)**, and then choose your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-    ![](./Images/Updated/E4-T1-S1.png)
+    ![](./Images/cop-fab-apr-ex1-g8.png)
 
+1. In your workspace, select **+ New item**.
+
+    ![](./Images/cop-fab-apr-ex1-g1.png)
+
+1. In the **New item** pane, enter **Warehouse (1)** in the search bar and then select **Warehouse (2)**.
+
+    ![](./Images/cop-fab-apr-ex4-g2.png)
 
 1. In the **Data Warehouse** home page, create a new **Warehouse** named **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create (2)**.
 
-   ![01](./Images/f39.png)   
+   ![01](./Images/cop-fab-apr-ex4-g3.png)   
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -46,9 +53,9 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. In your new warehouse, select the Create tables with **T-SQL** tile.
 
-   ![01](./Images/02/Pg4-T2-S1.png)
+   ![01](./Images/cop-fab-apr-ex4-g4.png)
 
-1. Replace the default SQL code with the following CREATE TABLE statement and use the **&#9655; Run** button to run the SQL script.
+1. Replace the default SQL code with the following **CREATE TABLE statement (1)** and use the **&#9655; Run (2)** button to run the SQL script.
 
    ```sql
    CREATE TABLE dbo.DimProduct
@@ -62,17 +69,17 @@ A warehouse is a relational database in which you can define tables and other ob
    GO
    ```
 
-   ![01](./Images/02/Pg4-T2-S2.png)
+   ![01](./Images/cop-fab-apr-ex4-g5.png)
 
-1. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas (1)** > **dbo (2)** > **Tables (3)** and verify that the **DimProduct (4)** table has been created.
+1. Use the **Refresh** button on the toolbar, then in the **Explorer** pane, expand **Schemas (1)** > **dbo (2)** > **Tables (3)** and verify that the **DimProduct (4)** table is present.
 
-   ![01](./Images/f--39.png)
+    ![](./Images/cop-fab-apr-ex4-g6.png)
 
-1. On the **Home** menu tab, use the **New SQL Query** button to create a new query.
+1. On the **Home** tab, select **New SQL query (2)** from the dropdown **(1)**.
 
-   ![01](./Images/f40.png)
+    ![](./Images/cop-fab-apr-ex4-g7.png)
 
-1. Enter the following **INSERT** statement and click on **&#9655; Run** button to insert three rows into the **DimProduct** table.
+1. Enter the following **INSERT statement (1)** and click on **&#9655; Run (2)** button to insert three rows into the **DimProduct** table.
 
     ```sql
    INSERT INTO dbo.DimProduct
@@ -83,27 +90,27 @@ A warehouse is a relational database in which you can define tables and other ob
    GO
     ```
 
-    ![01](./Images/f41.png)
+    ![01](./Images/cop-fab-apr-ex4-g8.png)
 
-1. When the query has finished. Go to the **Explorer** pane, select the **DimProduct** table and verify that the **three** rows have been added to the table.
+1. In the **Explorer** pane, select the **DimProduct (1)** table and verify that the data is displayed with three rows **(2)**.
 
-   ![01](./Images/f56.png)
+    ![](./Images/cop-fab-apr-ex4-g10.png)
 
-1. On the **Home (1)** menu tab, use the **New SQL Query (2)** button to create a new query for each table. 
+1. On the **Home** tab, select **New SQL query (2)** from the dropdown **(1)**.
 
-   ![01](./Images/f42.png)
+    ![](./Images/cop-fab-apr-ex4-g9.png)
 
-1. Open the **File explorer** from the bottom menu.
+1. In the **LabVM** open the **File explorer** from the bottom menu.
 
    ![01](./Images/f-43.png)
 
-1. Open the first text file, located at **C:\LabFiles\Files\create-dw-01.txt,** and copy the Transact-SQL code related to the 'DimProduct' table. Paste the **DimProduct** table code into the query pane you created. Next, copy the code for the 'DimCustomer', 'DimDate', and 'FactSalesOrder' tables using the respective files, **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt.** Place all the code sequentially and ensure that each query is executed in one query pane for the respective table.
+1. Open **create-dw-01.txt** from **C:\LabFiles\Files**, copy the Transact-SQL code for the **DimProduct** table, and paste it into the query pane; then open **create-dw-02.txt** and **create-dw-03.txt**, copy the code for **DimCustomer**, **DimDate**, and **FactSalesOrder**, paste them sequentially into the same query pane.
 
    ![01](./Images/02/Pg4-T2-S7.png)
 
 1. **Run** the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
-   ![01](./Images/f43.png)
+   ![01](./Images/cop-fab-apr-ex4-g11.png)
 
 1. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
 
@@ -112,9 +119,9 @@ A warehouse is a relational database in which you can define tables and other ob
     - **DimProduct**
     - **FactSalesOrder**
 
-    ![01](./Images/02/Pg4-T2-S9.png)  
+       ![01](./Images/cop-fab-apr-ex4-g13.png)  
 
-    > **Tip**: If the schema takes a while to load, just refresh the browser page.
+       > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
 ## Task 3: Define a data model
 
@@ -122,41 +129,83 @@ In this task, you'll define a data model in your data warehouse by creating rela
 
 A relational data warehouse typically consists of *fact* and *dimension* tables. The fact tables contain numeric measures you can aggregate to analyze business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.
 
-1. Scroll down the page and select **Model layouts**.
+1. On the **Home** tab, select **New semantic model**.
 
-1. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
+    ![](./Images/cop-fab-apr-ex4-g14.png)
 
-   ![Screenshot of the data warehouse model page.](./Images/model-dw1a.png)
+1. In the **New semantic model** pane, enter **sales-semantic-<inject key="DeploymentID" enableCopy="false"/> (1)** in **Direct Lake semantic model name**, select **Direct Lake on SQL (2)**, ensure **Select all (3)** is checked, and then select **Confirm (4)**.
 
-1. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
+    ![](./Images/cop-fab-apr-ex4-g15.png)
 
-    - **From table**: FactSalesOrder
-    - **Column**: ProductKey
-    - **To table**: DimProduct
-    - **Column**: ProductKey
-    - **Cardinality**: Many to one (*:1)
-    - **Cross filter direction**: Single
-    - **Make this relationship active**: Selected
-    - **Assume referential integrity**: Unselected
+1. Select **Workspaces (1)**, and then choose your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-    ![Screenshot of the data warehouse model page.](./Images/note3a.png)
-    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
+    ![](./Images/cop-fab-apr-ex1-g8.png)
 
-1. Repeat the process to create many-to-one relationships between the following tables:
+1. In the workspace, selectt the **sales-semantic-<inject key="DeploymentID" enableCopy="false"/>** semantic model that has been created.
 
-    - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
+    ![](./Images/cop-fab-apr-ex4-g16.png)
 
-    ![Screenshot of the data warehouse model page.](./Images/note3c.png)
-    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
+1. Select **Open** to open the **sales-semantic-<inject key="DeploymentID" enableCopy="false"/>** semantic model.
 
-    - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
+    ![](./Images/cop-fab-apr-ex4-g17.png)
 
-    ![Screenshot of the data warehouse model page.](./Images/note3d.png)
-    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
+1. Arrange the tables in the model view by dragging them so they are laid out clearly as shown.
+
+    ![](./Images/cop-fab-apr-ex4-g18.png)
+
+1. Drag the **ProductKey** field from **FactSalesOrder** and drop it onto **ProductKey** in **DimProduct**.
+
+    ![](./Images/cop-fab-apr-ex4-g19.png)
+
+1. In the **New relationship** pane, confirm the following settings and then select **Save (8)**:
+
+      - **From table (1)**: FactSalesOrder
+      - **Column (2)**: ProductKey
+      - **To table (3)**: DimProduct
+      - **Column (4)**: ProductKey
+      - **Cardinality (5)**: Many to one (*:1)
+      - **Cross filter direction (6)**: Single
+      - **Make this relationship active (7)**: Selected
+      - **Assume referential integrity**: Unselected
+
+        ![](./Images/cop-fab-apr-ex4-g20.png)
+
+1. Drag the **CustomerKey** field from **FactSalesOrder** and drop it onto **CustomerKey** in **DimCustomer**.
+
+      ![](./Images/cop-fab-apr-ex4-g21.png)
+
+1. In the **New relationship** pane, confirm the following settings and then select **Save (8)**:
+
+      - **From table (1)**: FactSalesOrder
+      - **Column (2)**: CustomerKey
+      - **To table (3)**: DimCustomer
+      - **Column (4)**: CustomerKey
+      - **Cardinality (5)**: Many to one (*:1)
+      - **Cross filter direction (6)**: Single
+      - **Make this relationship active (7)**: Selected
+      - **Assume referential integrity**: Unselected
+
+        ![](./Images/cop-fab-apr-ex4-g22.png)
+
+1. Drag the **SalesOrderDateKey** field from the **FactSalesOrder** table and drop it on the **DateKey** field in the **DimDate** table.
+
+      ![](./Images/cop-fab-apr-ex4-g23.png)
+
+1. In the **New relationship** pane, configure the relationship as follows, and then select **Save (8)**:
+
+   - **From table (1)**: FactSalesOrder  
+   - **Column (2)**: SalesOrderDateKey  
+   - **To table (3)**: DimDate  
+   - **Column (4)**: DateKey  
+   - **Cardinality (5)**: Many to one (*:1)  
+   - **Cross filter direction (6)**: Single  
+   - **Make this relationship active (7)**: Selected
+
+        ![](./Images/cop-fab-apr-ex4-g24.png)
 
 1. When all of the relationships have been defined, the model should look like this:
 
-   ![Screenshot of the model with relationships.](./Images/dw-relationships1a.png)
+   ![.](./Images/cop-fab-apr-ex4-g25.png)
 
 ## Task 4: Generate reports using Copilot
 
@@ -164,51 +213,41 @@ In this task, you will utilize Microsoft Fabric's Copilot feature to generate co
 
 1. When you click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
 
-     ![](./Images/10.png)
+     ![](./Images/cop-fab-apr-ex4-g26.png)
 
     - This relationship indicates that each record in the "FactSalesOrder" table is associated with a specific customer represented in the "DimCustomer" table. For example, if we have a sales record in "FactSalesOrder" for a particular transaction, we can use this relationship to look up additional details about the corresponding customer from the "DimCustomer" table.
 
     - This linkage is crucial for defining the Semantic Model used by Power BI. The Semantic Model essentially acts as a blueprint that outlines how data elements are interconnected and how they should be interpreted within Power BI. By establishing and defining relationships between tables, we're instructing Power BI on how to navigate and analyze the data effectively.
  
-1. Clicking on **New Report (2)** from the **reporting tab (1)** allows you to create a new report within Power BI. This report will utilize the Semantic Model defined by the relationships established in the data warehouse.
+1. From the **File (1)** menu, select **Create new report (2)** to create a report using the semantic model.
  
-   ![](./Images/f47.png)
+   ![](./Images/cop-fab-apr-ex4-g27.png)
 
 1. The Semantic Model, as defined in the data warehouse, is reflected in the Power BI interface. This includes the tables and their respective fields visible in the Data Pane of Power BI, which you can use to build your reports.
 
-1. Click on **Continue** for **New report with all available data**.
+1. On the report canvas, select **Copilot** from the top menu to open the Copilot pane.
 
-   ![](./Images/f48.png)
+   ![](./Images/cop-fab-apr-ex4-g28.png)
 
-1. Locate and click on the **Copilot** feature within the tool or platform you're using.
+1. Explore the capabilities of Copilot further by **clicking on its logo** within the text box. This will allow you to access additional features and functionalities that Copilot offers, providing a deeper understanding of its capabilities.
 
-   ![](./Images/13.png)
-
-1. If the pop-up titled **Welcome to Copilot in Power BI** appears, proceed by selecting **Get Started**.
-
-   ![](./Images/14.png)
-
-1. Locate the logo or icon associated with Copilot, then click on it to access its menu or interface.
-
-   ![](./Images/15.png)
+   ![](./Images/cop-fab-apr-ex4-g29.png)
 
 1. Recognize that Copilot offers functionalities such as providing suggestions, generating code snippets, and offering explanations. However, it's important to note its limitations, which may include the inability to create certain visualizations or directly modify page layouts.
 
 1. Selecting **What's in my data** prompts Copilot to analyze the semantic model or dataset currently in use.
 
-   ![](./Images/16.png)
+   ![](./Images/cop-fab-apr-ex4-g30.png)
 
-   - Copilot's analysis indicates that your dataset encompasses **sales performance**, **customer details**, **product information**, and **query performance**, offering a holistic view of your business operations. It suggests potential applications such as sales trend analysis, regional performance evaluation, customer segmentation, product evaluation, and query optimization. This highlights Copilot's adept understanding of dataset components and analytical techniques, providing valuable insights for strategic decision-making, customer engagement strategies, product refinement, and system enhancement.
-    
-   - Copilot represents a significant advancement in AI utilization, showcasing its capability beyond just generating code or manipulating data. Its capacity to assist in analyzing datasets is particularly noteworthy, as it offers intelligent insights and suggestions that enhance the entire data analysis process. By leveraging Copilot, users can gain a deeper understanding and uncover valuable patterns within their datasets, ultimately empowering them to make informed decisions based on the insights derived. This highlights the transformative potential of AI in augmenting human capabilities and driving innovation in data analysis methodologies.
- 
-1. Explore the capabilities of Copilot further by **clicking on its logo** within the text box. This will allow you to access additional features and functionalities that Copilot offers, providing a deeper understanding of its capabilities.
-  
-   ![](./Images/24.png)
+1. Review the Copilot response, which summarizes the tables and fields in your data model.
+
+   ![](./Images/cop-fab-apr-ex4-g31.png)
+
+   > **Note:** The response format may vary since it is generated dynamically by Copilot.
 
 1. Click **Create a page that shows**.
 
-    ![](./Images/17.png)
+    ![](./Images/cop-fab-apr-ex4-g32.png)
    
 1. At this time, you can only ask for a page or report to be created. You can't ask for specific visuals.
  
@@ -217,45 +256,56 @@ In this task, you will utilize Microsoft Fabric's Copilot feature to generate co
     ```
     Create a page that shows "Total Sales by Product Category"
     ```
+
+    ![](./Images/cop-fab-apr-ex4-g33.png)
  
-1. **Execute the command** and let Copilot generate the report. Note that AI-generated results may vary, and you're never entirely sure what you'll get.
+1. **Execute the command** and let Copilot generate the report. Note that AI-generated results may vary.
 
-    ![](./Images/f-49.png)
-
-   - The report provides a comprehensive analysis of total sales across a spectrum of product categories, revealing a consistent pattern of total sales summing up to 19.59 million across all 39 categories. Similarly, the quantity sold uniformly stands at 25.98 thousand units for each category. With an average total sales figure of 4.55 thousand, it suggests an even distribution of sales performance across all categories. This uniformity underscores a balanced sales landscape across diverse product categories, thereby offering valuable insights for informed decision-making in subsequent business strategies.
+    ![](./Images/cop-fab-apr-ex4-g34.png)
    
 1. Type the following command into Copilot
 
     ```
     Suggest Content for this Report
     ```
+
+    ![](./Images/cop-fab-apr-ex4-g35.png)
  
 1. **Expand each suggestion** to see the text of the prompt and what will be created. This helps illustrate the range of suggestions Copilot can provide.
 
-    ![](./Images/f50.png)
+    ![](./Images/cop-fab-apr-ex4-g36.png)
 
 1. Click on **Create** on any suggestion **(1)**. You can see the report **(2)**.   
 
-    ![](./Images/f-51.png)
- 
-    >**Note:** Click **Edit** to demonstrate that you can adjust the query and customize the report.
+    ![](./Images/cop-fab-apr-ex4-g37.png)
 
-   ![](./Images/f-52.png)
+1. Review the generated report page, which includes visuals for sales performance and trends such as total sales, average sales, category breakdown, and regional distribution.
 
-1. **Clear the input box** and select:
+    ![](./Images/cop-fab-apr-ex4-g38.png)
+
+    > **Note:** The layout and visuals may vary as they are dynamically generated by Copilot.
+
+1. In the **Copilot** pane, enter the followin **prompt (1)**, and then select **Send (2)**.
 
     ```
     Give me an executive summary
     ```
-    ![](./Images/23.png)
 
-    ![](./Images/f-53.png)    
+    ![](./Images/cop-fab-apr-ex4-g39.png)
 
-1. Click on **File -> Save** from the top left corner. Enter the report name as **Sample (1)** and click on **Save (2)**.
+1. Review the Copilot-generated executive summary, which highlights key insights such as total sales, average order value, and top-performing product categories.
 
-    ![](./Images/f54.png)
+    ![](./Images/cop-fab-apr-ex4-g40.png)
 
-1. The summary provides an overview of sales revenue data from 2021 to 2022, highlighting increases year-over-year and identifying key months and regions driving revenue growth, with 2022 contributing significantly to total revenue, led by strong performance in the United States.
+    > **Note:** The response content and format may vary since it is dynamically generated by Copilot.
+
+1. From the **File (1)** menu, select **Save (2)** to save the report..
+
+    ![](./Images/cop-fab-apr-ex4-g41.png)
+
+1. In the **Save your report** pane, enter a name in the **Name (1)** field, and then select **Save (2)**.
+
+    ![](./Images/cop-fab-apr-ex4-g42.png)
 
 ## Summary
 
