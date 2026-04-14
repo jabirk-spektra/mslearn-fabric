@@ -4,7 +4,7 @@
 
 ## Overview
 
-In the exercise, you will create a simple data pipeline to bring in customer sales data. You are using the KiZAN Fabric Tenant - where we have Copilot enabled, demonstrate doing the same thing, but by using a new Data Flow Gen2 And leveraging the native integration of Copilot to use natural language to ingest and transform your data.
+In the exercise, you will create a simple data pipeline to bring in customer sales data. You are using the KiZAN Fabric Tenant - where we have Copilot enabled, demonstrating doing the same thing, but by using a new Data Flow Gen2, and leveraging the native integration of Copilot to use natural language to ingest and transform your data.
 
 ## Lab objectives
 
@@ -32,7 +32,7 @@ In this task, you will create a new **Dataflow Gen2** in Microsoft Fabric's Data
 
     ![](./Images/cop-fab-apr-ex3-g2.png)
 
-1. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
+1. After a few seconds, the Power Query editor for your new data flow opens as shown here.
 
    ![New dataflow.](./Images/cop-fab-apr-ex3-g3.png)
 
@@ -73,7 +73,7 @@ In this task, you will create a new **Dataflow Gen2** in Microsoft Fabric's Data
 
     ![](./Images/cop-fab-apr-ex3-g9.png)
 
-1. Looking at the data… Notice the **Item** Column. This is really three different fields -- It contains a short **description of the item, a color and a size**.
+1. Looking at the data… Notice the **Item** Column. This is really three different fields -- It contains a short **description of the item, a color, and a size**.
 
    ![New dataflow.](./Images/cop-fab-apr-ex3-g10.png)
 
@@ -102,7 +102,7 @@ In this task, you will create a new **Dataflow Gen2** in Microsoft Fabric's Data
 1. In the **Copilot** pane, enter the prompt in the input box **(1)** and then select **Send (2)**.
 
     ```
-    Add a step that split the Item column on the ' ', creating three new fields called Description, Color and Size
+    Add a step that splits the Item column on the ' ', creating three new fields called Description, Color, and Size
     ```
 
     ![](./Images/cop-fab-apr-ex3-g15.png)
@@ -130,4 +130,4 @@ In this lab, you have completed:
 
   + Create New - Dataflow Gen2
 
-### You have successfully completed the lab. Click on Next >> to procced with next Exercise.
+### You have successfully completed the lab. Click on Next >> to proceed with the next Exercise.
