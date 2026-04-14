@@ -58,7 +58,7 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
 ### Summary
 
-In this exercise, you have signed up for Microsoft Fabric Trial and created a workspace.
+In this exercise, you have signed up for the Microsoft Fabric Trial and created a workspace.
 
 ### Review 
 In this lab, you have completed:
@@ -66,4 +66,4 @@ In this lab, you have completed:
  + Signed up for Microsoft Fabric Trial
  + Created a workspace
 
-### You have successfully completed the lab. Click on Next >> to procced with next Exercise.
+### You have successfully completed the lab. Click on Next >> to proceed with the next Exercise.
