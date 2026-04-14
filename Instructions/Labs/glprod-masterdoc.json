@@ -3,23 +3,23 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/Getting-Started-v2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/gl-prod-getting-started.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/Create-workspace-01.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/gl-create-workspace-01.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/01-IBM-RTIAD-Data-Engineering.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/gl-data-engineering.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/Ex7ibm.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/gl-ingest-data-with-fabric.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/refs/heads/main/Instructions/Labs/gl-Exercise-4-Data-Warehouse-Analyze-Data-in-a-Warehouse-with-Fabric-Copilot.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/gl-analyze-data-in-a-warehouse.md",
         "Order": 5
       }
     ]

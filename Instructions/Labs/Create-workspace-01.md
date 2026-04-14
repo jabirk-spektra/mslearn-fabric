@@ -15,39 +15,46 @@ You will be able to complete the following tasks:
 
 In this task, you will initiate your 60-day free trial of Microsoft Fabric by signing up through the Fabric app, providing access to its comprehensive suite of data integration, analytics, and visualization tools
 
-1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Free trial (2)**.
+1. On the **Power BI homepage**, select the **Profile icon (1)**, and then choose **Free trial (2)**.
 
-     ![Account-manager-start](./Images/f1.png)
+     ![t](./Images/fab-kynd-ex1-g5.png)
 
-1. A new prompt will appear asking you to **Activate your 60-day free Fabric trial capacity**, click on **Activate**.
+1. On the **Activate your 60-day free Fabric trial capacity** pane, keep the default **Trial capacity region**, and then select **Activate**.
 
-      ![Account-manager-start](./Images/fabric-3.png)
+      ![Account-manager-start](./Images/fab-kynd-ex1-g6.png)
 
-1. Click on **Stay on current page** when prompted.
+1. On the **Successfully upgraded to Microsoft Fabric** pop-up, select **OK**.
 
-      ![Account-manager-start](./Images/fabric-2.png)
+      ![Account-manager-start](./Images/fab-kynd-ex1-g7.png)
 
-1. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
+1. On the **Invite teammates to try Fabric to extend your trial** pop-up, select **Close**.
 
-      ![Account-manager-start](./Images/lab1-image5.png)
+      ![Account-manager-start](./Images/fab-kynd-ex1-g8.png)
+
+1. Select the **Profile icon (1)** and verify the **Fabric and Power BI trial status (2)**.
+
+      ![Account-manager-start](./Images/fab-kynd-ex1-g9.png)
       
 ### Task 2: Create a workspace
 
 Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
-1. Now, select **Workspaces (1)** and click on **+ New workspace (2)**.
+1. Select **Workspaces (1)**, and then choose **+ New workspace (2)**.
 
-    ![New Workspace](./Images/f2.png)
+    ![New Workspace](./Images/fab-kynd-ex1-g10.png)
 
 1. Fill out the **Create a workspace** form with the following details:
- 
+
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**
- 
+   - **Advanced:** Expand it, under **License mode** select **Fabric (1)**, under **Capacity** select **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Region"></inject> (2)**, and then select **Apply (3)**.
+
       ![name-and-desc-of-workspc](./Images/f3.png)
  
-   - **Advanced:** Expand it and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Region"></inject>(2)** and click on **Apply (3)** to create and open the workspace.
- 
-      ![advanced-and-apply](./Images/f4.png)
+      ![advanced-and-apply](./Images/cop-fab-apr-gs-g5.png)
+
+1. On the **Introducing task flows** pop-up, select **Got it**.
+
+    ![.](./Images/cop-fab-apr-gs-g6.png)
 
 ### Summary
 
