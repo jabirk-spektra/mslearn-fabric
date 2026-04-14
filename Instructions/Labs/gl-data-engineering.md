@@ -346,51 +346,60 @@ In this task, you will utilize the visual query editor in Microsoft Fabric to cr
 
 In this task, you will create a Power BI report by leveraging the default dataset automatically generated from your lakehouse tables. This process enables you to visualize and analyze your data effectively using Power BI's reporting capabilities.  
 
-1. From the left-navigation pane of the SQL Endpoint page, select the **Model layouts** tab. The data model schema for the dataset is shown.
+1. On the SQL endpoint page, select **New semantic model**.
 
-    ![Screenshot of a data model.](./Images/modellayouts.png)
+    ![](./Images/cop-fab-apr-ex2-g47.png)
 
-    > **Note**: In this exercise, the data model consists of a single table. In a real-world scenario, you would likely create multiple tables in your lakehouse, each of which would be included in the model. You could then define relationships between these tables in the model.
+1. In the **New semantic model** pane, enter **sales-model (1)** in the **Direct Lake semantic model name** field, select **Direct Lake on SQL (2)**, ensure **sales (3)** is selected, and then click **Confirm (4)**.
 
-1. In the menu ribbon, select the **Reporting (1)** tab. Then select **New report (2)**. A new browser tab opens in which you can design your report.
+    ![](./Images/cop-fab-apr-ex2-g48.png)
 
-    ![Screenshot of the report designer.](./Images/f22.png)
+1. Select **Workspaces (1)**, and then choose your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-    >**Note:** On the **New report with all available data** select **Continue**.
+    ![](./Images/cop-fab-apr-ex1-g8.png)
 
-     ![Screenshot of the continue.](./Images/f23.png)    
+1. In the workspace, select the **sales-model** semantic model that has been created.
+
+    ![](./Images/cop-fab-apr-ex2-g49.png)
+
+1. Open the **sales-model**, and then select **Open**.
+
+    ![](./Images/cop-fab-apr-ex2-g50.png)
+
+1. In the top-right corner, select **Viewing (1)**, and then choose **Editing (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g51.png)
+
+1. In the **File (1)** menu, select **Create new report (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g52.png)
 
 1. In the **Data (1)** pane on the right, expand the **sales (2)** table. Then select the following fields:
     - **Item (3)**
     - **Quantity (4)**
+    - table visualization is added to the report **(5)**:
 
-        >**Note:** A table visualization is added to the report **(5)**:
+        ![Screenshot of a report containing a table.](./Images/cop-fab-apr-ex2-g53.png)
 
-        ![Screenshot of a report containing a table.](./Images/f24.png)
+1. Hide the **Data** and **Filters** panes to create more space.
 
-1. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the visualization to a **Clustered bar chart** and resize it as shown here.
+1. Ensure the table visual is selected **(1)**, change the visualization to **Clustered bar chart (2)** in the **Visualizations** pane, and resize the visual to a **Clustered bar chart (2)**.
 
-    ![Screenshot of a report containing a clustered bar chart.](./Images/clustered-bar-chart.png)
+    ![](./Images/cop-fab-apr-ex2-g54.png)
 
-1. On the **File** menu, select **Save**. 
+1. Review the created chart and interact with the visual to explore the data.
 
-    ![Save report.](./Images/f25.png)
+    ![](./Images/cop-fab-apr-ex2-g55.png)
+
+1. In the **File (1)** menu, select **Save (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g56.png)
 
 1. Then save the report as **Item Sales Report (1)** in the workspace you created previously and click on **Save (2)** .
 
-    ![Save report.](./Images/f26.png)
-
-1. Close the browser tab containing the report to return to the SQL endpoint for your lakehouse. Then, in the hub menu bar on the left, select your workspace to verify that it contains the following items:
-    - Your lakehouse.
-    - The SQL endpoint for your lakehouse.
-    - A default dataset for the tables in your lakehouse.
-    - The **Item Sales Report** report.
-
-      ![Save report.](./Images/f27.png)    
-
+    ![Save report.](./Images/cop-fab-apr-ex2-g57.png)
+  
 1. Click on the **Back button** to navigate back to the report page.   
-
-    ![Save report.](./Images/f28.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -404,38 +413,33 @@ In this task, you will create a Power BI report by leveraging the default datase
 
 In this task, you will utilize Fabric Copilot to analyze your report, enabling you to gain deeper insights and enhance your data-driven decision-making process.
 
-1. Click on **Copilot (1)** button at the right of the screen to open the copilot chat window, and select **Get Started (2)**.
+1. Click on **Copilot (1)** button at the right of the screen to open the copilot chat window.
 
-   ![New dataflow.](./Images/item-sales-report.png)
+   ![New dataflow.](./Images/cop-fab-apr-ex2-g58.png)
 
-1. Select the first input to copilot as **Give me an executive summary**.
+1. In the **Copilot** pane, enter **Give me an executive summary (1)**, and then select **Send (2)**.
 
-    ![Save report.](./Images/f29.png)
+    ![](./Images/cop-fab-apr-ex2-g59.png)
 
-1. Ask copilot **Split the Item column on the ' ', creating three new fields called Description, Color and Size** or **Publish the Report** and analyze the output. 
+1. Review the Copilot-generated summary.
 
-   ![New dataflow.](./Images/publishreport.png)
+    ![](./Images/cop-fab-apr-ex2-g60.png)
+
+    > **Note:** The response format may vary as it is generated by Copilot.
 
 1. After a few seconds, ask diffrent question to copilot **provide me insights of sales on Mountain-200, Silver 46** and read the output to understand the data gathered by copilot.
 
-   ![New dataflow.](./Images/provide200.png)
+   ![New dataflow.](./Images/cop-fab-apr-ex2-g61.png)
+
+    > **Note:** The response format may vary as it is generated by Copilot.
 
 1. Provide another prompt to copilot **what all insights will be valuable from the data we have to double the products sales** and wait for the result. it sometimes take 2 to 5 min.
-
-    ![Save report.](./Images/f30.png)
 
 1. Once you receive output from the above prompt, read the output and provide another input to copilot **for all the products**. it will provide potential insights and enhancement for the products sale. 
 
    ![New dataflow.](./Images/f31.png)
 
 1. You can also try different input prompts to analyze the data more efficiently with the help of copilot.
-
-1. Click on **X** to quit Data Engineering.
-
-   ![New dataflow.](./Images/f-31.png)
-
-    >**Note:** If the **Are you sure you want to exit** pop-up appears, click on **Yes**.  
-
 
 ### Summary
 
