@@ -340,6 +340,14 @@ In this task, you will utilize the SQL analytics endpoint automatically created 
 
 When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
+1. Select **Workspaces (1)**, and then choose your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g25.png)
+
+1. In your workspace, select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+
+    ![](./Images/cop-fab-apr-ex2-g26.png)
+
 1. At the top-right, select the **Lakehouse (1)** dropdown, choose **SQL analytics endpoint (2)**, and wait for the SQL endpoint to open.
 
     ![](./Images/cop-fab-apr-ex2-g42.png)
