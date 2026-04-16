@@ -314,6 +314,14 @@ In this task, you will create a notebook within Microsoft Fabric to develop and 
 
     ![](./Images/cop-fab-apr-ex2-g38.png)
 
+1. Select **Workspaces (1)**, and then choose your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g25.png)
+
+1. In the workspace list, select **Notebook**.
+
+    ![](./Images/cop-fab-apr-ex-cor-g15.png)
+
 1. In the notebook, select the **Save** icon.
 
     ![](./Images/cop-fab-apr-ex2-g39.png)
