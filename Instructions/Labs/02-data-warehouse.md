@@ -291,9 +291,7 @@ In this task, you will create a visual query using the graphical query designer 
 
     ![](./Images/e2t6p1.png)
 
-1. If you're interested in looking at data for a single product, as per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
-
-    ![](./Images/E3-T6-S7.png)
+1. If you're interested in looking at data for a single product, as per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column.
 
 1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Download Excel file**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
 
@@ -351,7 +349,7 @@ In this task, you will visualize your data from a single query or your data ware
 
     ![](./Images/E3-T7-S7.png)
 
-1. In the **Visualizations** pane, select the **Format your visual (1)** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category (2)**.
+1. In the **Visualizations** pane, select the **Format your visual (1)** tab and in the **General (2)** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category (3)**.
 
    ![03](./Images/e2t7p6.png)
 

@@ -184,6 +184,8 @@ In this task, you'll create a pipeline to automate data workflows. We will use t
 
         ![Account-manager-start](./Images/E1T4S8i.png)
 
+    > **Note:** If the preview data does not appear, please check that the URL entered in the last step is correct and does not contain any whitespace or additional characters.
+
 1. On the **Choose data destination** page, click **OneLake catalog (1)** and select the lakehouse **Lakehouse\_<inject key="DeploymentID" enableCopy="false"/> (2)**.
     
     ![](./Images/E1T4S9.png)
@@ -192,7 +194,7 @@ In this task, you'll create a pipeline to automate data workflows. We will use t
 
     ![](./Images/E1T2S10.png)
 
-1. On the **Map to destination** page, set **Folder path** to **new_data (1)** and **File name** to **sales.csv (1)**.
+1. On the **Map to destination** page, set **Folder path** to **new_data/ (1)** and **File name** to **sales.csv (1)**.
     
     ![08](./Images/E1T2S11.png)
 
@@ -214,7 +216,7 @@ In this task, you'll create a pipeline to automate data workflows. We will use t
 
     ![](./Images/cpdta.png)
 
-1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+1. Click anywhere on whitespace next to copy data. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
     > **Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
 
@@ -261,6 +263,8 @@ In this task, you'll create a pipeline to automate data workflows. We will use t
 
       ![09](./Images/fab-ric-ex1-g15.png)
 
+    - Wait until pileline run is succeeded
+
 1. From the Top bar navigate to your Lakehouse by clicking on the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**, expand **Files (2)** and select the **new_data (3)** folder, refresh the page and verify that the **sales.csv (4)** file has been copied.
 
     ![Account-manager-start](./Images/lhcsv.png)
@@ -291,7 +295,7 @@ In this task, create a **Notebook** to perform and document your data analysis. 
 
     ![](./Images/E1T5P5.png) 
  
-1. Select the previously created **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** then click **Connect (2)**.
+1. Select the previously created **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** then click **Add (2)**.
  
     ![](./Images/ex1t5p5.png) 
 

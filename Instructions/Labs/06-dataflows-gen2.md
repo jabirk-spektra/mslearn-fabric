@@ -63,16 +63,15 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
 1. Duplicate the current window. From the left pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** Lakehouse. 
 
-   ![](./Images/E8T1S8.png)
-
+    ![](./Images/E8T1S8.png)
 
 1. Hover on **orders (1)** file and click on the **Ellipsis (...)**, and then select **Delete (2)**.
 
-   ![](./Images/E8T1S9.png)
+    ![](./Images/E8T1S9.png)
 
 1. Click on **Delete** for the pop-up **Delete "orders"?**
 
-   ![](./Images/delod.png)
+    ![](./Images/delod.png)
 
 ## Task 2: Add data destination for Dataflow
 
@@ -106,9 +105,7 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
    ![](./Images/E8T2S6.png)
 
-1. Select **Publish** from the bottom right corner to publish the dataflow. Then wait for the **Dataflow** to be created in the workspace.
-
-   ![](./Images/E8T2S7.png)
+1. Select **Home** tab, and click on **Save and Run**.
 
 ## Task 3: Add a dataflow to a pipeline
 

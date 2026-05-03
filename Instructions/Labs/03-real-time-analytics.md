@@ -31,7 +31,7 @@ In this task, you will create a KQL database to facilitate querying of static or
 
 1. Create a new **Eventhouse** with the name **Eventhouse-<inject key="DeploymentID" enableCopy="false"/> (1)** and click **Create (2)**.
 
-    ![](./Images/E3T1S3.png)
+    ![](./Images/E3T1S3-1.png)
 
 1. In the **Welcome to Eventhouse!** pop-up, click **Get started**.
 
@@ -140,8 +140,7 @@ In this task, you will create a Power BI report using your KQL Queryset as the f
 
     > **Note:** If you are unable to see the option due browser resolution,you should see an option **More (1)** click on it, then click on **Power BI Report (2)**
 
-     ![Screenshot of a report from a KQL query.](./Images/E3T3S2-N.png)
-
+    > ![Screenshot of a report from a KQL query.](./Images/E3T3S2-N.png)
 
 1. In the report editor, in the **Data** pane, expand **Kusto Query Result** and select the checkboxes for **Item** and **TotalNet Revenue** fields.
 

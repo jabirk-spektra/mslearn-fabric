@@ -273,7 +273,7 @@ In this task, you will explore your experiments in Microsoft Fabric, which track
 
 1. Select the **&#128393;** **(Edit) (4)** button of the graph visualizing the accuracy for each run. 
 
-   ![](./Images/upE4T6S6.png)
+   ![](./Images/upE4T6S6-1.png)
 
 1. Change the **visualization type** to **bar (1)**. 
 
