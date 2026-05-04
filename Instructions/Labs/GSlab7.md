@@ -66,84 +66,74 @@ The architecture for this lab involves the following key components:
 
 - **Data Pipeline for Orchestration:** Dataflow is integrated into a Data Pipeline to automate the data ingestion and transformation process. The Data Pipeline orchestrates the flow of data, ensuring that the Dataflow runs as part of an automated process, reducing manual intervention and ensuring that data is regularly updated in the destination (Lakehouse).
 
-## Getting Started with the Lab 
+## Getting Started with the Lab Environment
 
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+## Accessing Your Lab Environment
 
-![08](./Images/Gs001.png) 
+Once you're ready to begin, your virtual machine and lab guide will be available directly within your web browser.
+
+![](./Images/vm00100.png)
 
 ## Virtual Machine & Lab Guide
 
-In the integrated environment, the lab VM serves as the designated workspace, while the lab guide is accessible on the right side of the screen.
-
-**Note**: Kindly ensure that you are following the instructions carefully to ensure the lab runs smoothly and provides an optimal user experience.
+The virtual machine provides access to the Azure Portal and Microsoft security portals.  
+The lab guide remains visible throughout the lab exercises.
 
 ## Exploring Your Lab Resources
 
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+Navigate to the **Environment** tab to review lab resources and credentials.
 
-![08](./Images/GS2.png)
-   
+![](./Images/env01.png)
+
 ## Utilizing the Split Window Feature
- 
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
- 
-![Use the Split Window Feature](./Images/GS3.png) 
 
-## Lab Guide Zoom In/Zoom Out
- 
-To adjust the zoom level, select the **A↕ (1)** icon next to the timer, and then choose the required **zoom percentage (2)** from the dropdown.
+Use the **Split Window** button in the top-right corner to open the lab guide in a separate window for easier navigation.
 
-![08](./Images/GS4.png)  
+![](./Images/splitwin01.png)
 
 ## Managing Your Virtual Machine
 
-Feel free to start, stop, or restart your virtual machine by selecting **More (1)**, choosing **Resources (2)**, and using the available **VM actions (3)** to manage your lab environment as needed.
+Start, stop, or restart your virtual machine as needed from the **Resources** tab.
 
-![](Images/GS5.png)
-  
+![](./Images/RT1.png)
+
+## Lab Guide Zoom In / Zoom Out
+
+Adjust the zoom level using the **A↕ : 100%** icon located next to the timer.
+
+![](./Images/zoominout1.png)
+
 ## Let's Get Started with Azure Portal
 
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On the virtual machine, click the **Azure Portal** icon:
 
-   ![Launch Azure Portal](./Images/GS01.png)
-   
-1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
- 
-   - **Email (1):** <inject key="AzureAdUserEmail"></inject>
+    ![](./Images/vm101.png)
 
-   - click **Next (2)**.
- 
-      ![Enter Your Username](./Images/GS002.png)
- 
-1. Next, provide your **Enter Temporary Access Pass**:
- 
-   - **Password (1):** <inject key="AzureAdUserPassword"></inject>
+1. On the **Sign in to Microsoft Azure** page, enter:
 
-   - click **Sign in (2)**.
- 
-      ![Enter Your Password](./Images/GS003.png)
+   - **Email/Username:** <inject key="AzureAdUserEmail" enableCopy="true"/>
 
-1. If **Action Required** window pop up click on **Ask later**.
- 
-1. If prompted to stay signed in, you can click "No."
+       ![](./Images/sign1.png)
 
-1. If you see the pop-up **Sign in to sync data**, Click on **No,thanks.** 
+1. Enter the password:
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+   - **Password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+      ![](./Images/tpwrd.png)
+
+1. Select **No** when prompted to stay signed in.
+
+   ![](./Images/sign001.png)
 
 ## Support Contact
- 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
-Learner Support Contacts:
-- Email Support: cloudlabs-support@spektrasystems.com
-- Live Chat Support: https://cloudlabs.ai/labs-support
+CloudLabs support is available 24/7 to assist learners and instructors.
+
+- **Email:** cloudlabs-support@spektrasystems.com  
+- **Live Chat:** https://cloudlabs.ai/labs-support  
 
 Now, click on **Next** from the lower right corner to move on to the next page. 
 
-![Launch Azure Portal](./Images/GS004.png) 
+![](./Images/next.png)
 
 ### Happy Learning!!
