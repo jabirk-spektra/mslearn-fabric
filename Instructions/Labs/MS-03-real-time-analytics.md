@@ -193,6 +193,8 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
 
 1. Add a new code cell in the notebook using **+ Code (1)**. Then, in the new cell, add the following code **(2)** and click on the run cell icon **(3)**:
 
+   ![](./Images/E3T4S2.png)
+
    ```python
    from notebookutils import mssparkutils
    from pyspark.sql.types import *
@@ -224,8 +226,6 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
    ```
 
     ![](./Images/E3T4S2-1208.png)
-    
-    ![](./Images/E3T4S2.png)
           
 1. Ensure the message *Source stream created...* is printed. The code you just ran has created a streaming data source based on a folder to which some data has been saved, representing readings from hypothetical IoT devices.
 
