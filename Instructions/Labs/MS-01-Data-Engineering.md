@@ -21,7 +21,7 @@ In this exercise, you will be able to complete the following tasks:
 
 In this task, you will initiate your 60-day free trial of Microsoft Fabric by signing up through the Fabric app, providing access to its comprehensive suite of data integration, analytics, and visualization tools
 
-1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Free trial (2)**.
+1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Start trial (2)**.
 
     ![Account-manager-start](./Images/01/E1T1S1.png)
 
@@ -101,7 +101,8 @@ In this task, switch to the Data engineering experience and create a new Lakehou
 
 1. Enter the **Name** as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**. Ensure that the **Lakehouse schema** option is unchecked, as it is selected by default when creating the **Lakehouse**. Then click **Create (2)**.
 
-    ![](./Images/E1T3S5-1.png)   
+    ![](./Images/E1T3S5-1.png) 
+    > **Note**: Please make sure to uncheck the checkbox of Lakehouse schemas while creating the lakehouse  
 
 1. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the left pane, click the **Ellipsis (...) (1)** menu for the **Files** node, click on **New subfolder (2)**.
     
@@ -128,6 +129,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
     
     ![](./Images/Lake9-new.png)
+    > **Note**: By Default the name of the pipeline is Pipeline_1, Please change it to as mentioned above.
    
 1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant (1)**.
 
@@ -339,9 +341,10 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
 In this task, you'll use SQL to query tables in a database. You'll write statements to retrieve, filter, and manipulate data, helping you analyze the dataset and build your SQL skills.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
+1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint (1)**.
 
     ![.](./Images/Lake19.png)
+    > **Note**:Please wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables
 
 1. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
