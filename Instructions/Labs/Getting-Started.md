@@ -48,7 +48,7 @@ Participants should have:
 
 ## 🖼️ Architecture Diagram
 
-   ![](./Images/architecture-diagram-1108.png)
+   ![](./Images/gs/arch-diag-2005.png)
 
 ## 🔍 Explanation of Components
 
@@ -70,7 +70,7 @@ Welcome to your MS Fabric Foundation for Enterprise Analytics workshop! We've pr
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](./Images/labguidetab.png)
+   ![](./Images/gs/guide-2005.png)
 
 ## Virtual Machine & Lab Guide
 
