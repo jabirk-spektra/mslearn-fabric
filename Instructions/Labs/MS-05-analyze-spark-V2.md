@@ -2,9 +2,17 @@
 
 ### Estimated Duration: 75 Minutes
 
-In this exercise, you'll explore big data analytics in Microsoft Fabric using Apache Spark and PySpark. You’ll begin by creating a Lakehouse and uploading sales data files. Then, you’ll build a Spark notebook to load and structure the data using defined schemas. Using Spark dataframe operations, you’ll filter, group, and transform data for deeper insights. You’ll save the processed data in Parquet and partitioned formats for optimized performance. Next, you’ll create Delta tables and use both PySpark and SQL to analyze the data. Finally, you’ll visualize insights using Spark charts, matplotlib, and seaborn, and conclude by saving the notebook and ending the Spark session.
+## 📘 Scenario
 
-## Objectives
+Contoso Retail’s data engineering team needs to process and analyze large volumes of sales order data using Apache Spark in Microsoft Fabric. To support analytics workloads, the team plans to structure, transform, store, query, and visualize sales data using Spark notebooks and Lakehouse capabilities.
+
+In this exercise, you will help Contoso create a Lakehouse, load sales order files into Spark DataFrames, perform data exploration and transformations, save processed data to Parquet and Delta formats, query data using Spark SQL, and visualize business insights using Spark charts, Matplotlib, and Seaborn.
+
+## 📖 Overview
+
+In this exercise, you will use Apache Spark and PySpark in Microsoft Fabric to analyze and process sales order data. You will create a Lakehouse and notebook, load and structure CSV data using schemas, explore and aggregate data with Spark dataframes, transform and save data in optimized formats, create Delta tables, query data using SQL, and generate visualizations using Spark charts and Python visualization libraries. This hands-on experience will help you understand how to leverage Spark's distributed computing capabilities for large-scale data analysis and gain insights from sales data in Microsoft Fabric.
+
+## 🎯 Objective
 
 In this exercise, you will be able to complete the following tasks:
 
@@ -14,48 +22,41 @@ In this exercise, you will be able to complete the following tasks:
 - Task 4: Explore data in a dataframe
 - Task 5: Aggregate and group data in a dataframe
 - Task 6: Use Spark to transform data files
-
   - Task 6.1: Use dataframe methods and functions to transform data
   - Task 6.2: Save the transformed data
   - Task 6.3: Save data in partitioned files
-
 - Task 7: Work with tables and SQL
-
   - Task 7.1: Create a table
   - Task 7.2: Run SQL code in a cell
-
 - Task 8: Visualize data with Spark
-
   - Task 8.1: View results as a chart
   - Task 8.2: Get started with **matplotlib**
   - Task 8.3: Use the **seaborn** library
-
 - Task 9: Save the notebook and end the Spark session
 
 ## Task 1: Create a lakehouse and upload files
 
-In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the Data Engineering experience in the portal to initiate the creation of the data lakehouse.
+In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the Data Engineering experience in the portal to initiate the data lakehouse creation.
 
-1. From the left navigation pane, select your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace, click on **+ New item (2)** to create a new Lakehouse.
+1. In the left pane, navigate to **Workspaces (1)** icon and select **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**. 
 
-    ![](./Images/p6t1p1.png)
+    ![](./Images/p1t3p3.png)
 
-1. In the search box, search **Lakehouse (1)** and select **Lakehouse (2)**.
+1. Click on **+ New item (1)** to create a new lakehouse. In the search box, search for **Lakehouse (2)** and select **Lakehouse (3)** from the list.
 
-    ![](./Images/E5T1S2-1208.png)
+    ![](./Images/01/E1T3S4-2005.png)
    
 1. Enter the following details to create a Lakehouse. 
    
    - **Name:** Enter **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**
+   - **Uncheck (2)** the Lakehouse schemas checkbox
+   - Click on **Create (3)**
 
-   - Click on **Create (2)**
-   - Uncheck the **Lakehouse schemas** checkbox
-
-     ![](./Images/E1T3S5-1.png)
+     ![](./Images/05/E5T1S3-2005.png)
 
 1. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **Ellipses ... (1)** menu for **Files**, and select **Upload (2)** followed by **Upload folder (3)**.
 
-    ![](./Images/E5T1S4-1208.png)
+    ![](./Images/05/E5T1S4-2005.png)
 
 1. On the Upload folder pane, click on the **Browse (1)** option. Go to the **C:\LabFiles\Files\ (2)** location, select the **orders (3)** folder, and click on **Upload (4)**. 
 
@@ -77,13 +78,13 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
-1. From the left navigation pane, select your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace, click on **+ New item (2)** to create a new notebook.
+1. In the left pane, navigate to **Workspaces (1)** icon and select **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**. 
 
-    ![](./Images/E1T3S2-1108.png)
+    ![](./Images/p1t3p3.png)
 
-1. In the search box, search **Notebook (1)** and select **Notebook (2)**.
+1. Click on **+ New item (1)**. In the search box, search **Notebook (1)** and select **Notebook (2)**.
 
-    ![](./Images/E4T2S2-1208.png)
+    ![](./Images/04/E4T2S2-2005.png)
 
 1. On the **New Notebook** dialog, click **Create**.
 
@@ -114,8 +115,6 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
     ```
 
 1. Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
-
->Note: **If you face any error stating "Too many Requests for Capacity with error code 430"(1), navigate to Monitor(2) section to see if there are any ongoing spark jobs running if yes we can wait for it to finish or stop the process.**
 
 ## Task 3: Load data into a dataframe
 
@@ -687,9 +686,9 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 In this task, you will save your notebook with a meaningful name to preserve your work after processing the data. Additionally, you will end the Spark session to free up resources and complete your data engineering tasks.
 
-1. Click on the ⚙️ **Settings (1)** icon to view the notebook settings, and Set the **Name** of the notebook to **Explore Sales Orders Notebook (2)**, and then close the settings pane.
+1. Click on the ⚙️ **Settings (1)** icon to view the notebook settings, and Set the **Name** of the notebook to **Explore Sales Orders Notebook (2)**, and then close **(3)** the settings pane.
 
-    ![](./Images/Spark8-1.png)
+    ![](./Images/05/E5T9S1-2005.png)
 
 1. On the notebook menu, select **Stop session** to end the Spark session.
 
@@ -699,7 +698,7 @@ In this task, you will save your notebook with a meaningful name to preserve you
 
     > **Note:** The stop session icon is present next to the **Standard Session** option. If you can't see the **Stop Session** option, it means the Spark session has already ended.
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you:
 

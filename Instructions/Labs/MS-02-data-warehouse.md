@@ -2,9 +2,17 @@
 
 ### Estimated Duration: 90 Minutes
 
-In this exercise, you'll analyze data in a Microsoft Fabric data warehouse using SQL and visual tools. You'll begin by creating a data warehouse, designing its schema with fact and dimension tables, and inserting sample data. You’ll then define relationships to build a data model, run SQL queries to analyze data, and create a view for reuse. Finally, you'll use visual query and reporting features to explore and present insights effectively.
+## 📘 Scenario
 
-## Objectives
+Contoso Retail’s analytics team now needs to organize and analyze sales data within a structured data warehouse environment. To support business reporting and performance analysis, the team must create warehouse tables, define relationships between datasets, and build reusable analytical queries and reports.
+
+In this exercise, you will help Contoso create a data warehouse, populate fact and dimension tables, build a relational data model, analyze sales data using SQL and visual queries, and create reports for business insights.
+
+## 📖 Overview
+
+In this exercise, you will use Microsoft Fabric to create and analyze a relational data warehouse. You will create warehouse tables, load sample data, define relationships between fact and dimension tables, run SQL queries for analysis, create reusable views, and build visual reports using the semantic model and reporting capabilities in Microsoft Fabric. This will enable you to derive insights from the data and support data-driven decision-making for Contoso Retail.
+
+## 🎯 Objectives
 
 In this exercise, you will be able to complete the following tasks:
 
@@ -26,7 +34,7 @@ In this task, you will design and implement a data warehouse by organizing data 
    
 1. Click on **+ New item (1)** to create a new warehouse. In the search box, search **Warehouse (2)** and select **Warehouse** **(3)** from the list.
     
-    ![](./Images/p2t1p2.png)
+    ![](./Images/02/E2T1S2-2005.png)
 
 1. Enter the following details to create a **Warehouse**:
 
@@ -99,7 +107,7 @@ In this task, you will create database tables by defining their structure with a
 
      ![](./Images/p2t2p12.png)
 
-1. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+1. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
    
     - **DimCustomer**
     - **DimDate**
@@ -120,7 +128,7 @@ In this task, you will create a relational data warehouse consisting of fact and
     
 1. Provide the Direct Lake semantic model name as **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (1)** and select **DimCustomer, DimDate, DimProduct, FactSalesOrder (2)** tables from the list. Then, click on **Confirm (3)**.
 
-    ![](./Images/e2p3t3p2.png)
+    ![](./Images/02/E2T3S2-2005.png)
 
 1. Go back to the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace. Select the recently created semantic model named as **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
@@ -230,7 +238,7 @@ In this task, you will query data warehouse tables using SQL to retrieve and ana
 
 In this task, you will create a view in the data warehouse to encapsulate SQL logic for easier querying and data abstraction. A Microsoft Fabric data warehouse offers similar capabilities to relational databases, allowing you to create views and stored procedures to streamline complex queries and improve data access efficiency.
 
-1. Modify and Run the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).
+1. Modify and run the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).
 
     ```SQL
    CREATE VIEW vSalesByRegion
@@ -269,13 +277,13 @@ In this task, you will create a visual query using the graphical query designer 
 
 1. From Tables, drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
-    ![](./Images/drag-factsalesorder.png)
+    ![](./Images/02/E2T6S2-2005.png)
 
 1. And then, drag **DimProduct** onto the **canvas**. We now have two tables in our query.
 
-    ![](./Images/drag-dimproduct.png)
+    ![](./Images/02/E2T6S3-2005.png)
 
-1. Click the **+ (1)** button on the **FactSalesOrder** and then click on **Merge queries (2)**.
+1. Select the **FactSalesOrder** table and click the **+ (1)** button and then click on **Merge queries (2)**.
 
     ![](./Images/f-32.png)
 
@@ -311,7 +319,7 @@ In this task, you will visualize your data from a single query or your data ware
 
     ![](./Images/p2t3p5.png)
 
-1. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model; it simply hides them from view on the report canvas.
+1. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model; it simply hides them from view on the report canvas. Right-click on the column name and select **Hide in report view**.
    
     - From FactSalesOrder
         - **SalesOrderDateKey**
@@ -358,7 +366,7 @@ In this task, you will visualize your data from a single query or your data ware
 
 1. In the **File (1)** menu, select **Save (2)**. select **fabric-<inject key="DeploymentID" enableCopy="false"/> (3)**, enter a name as **Sales Report (4)**, and click the **Save (5)** button.
 
-   ![04](./Images/E2T7S9.1-1108.png)
+   ![04](./Images/02/E2T7S11-2005.png)
 
    ![](./Images/e2p3t7p11.png)
 
@@ -366,7 +374,7 @@ In this task, you will visualize your data from a single query or your data ware
 
    ![](./Images/e2p3t7p12.png)
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you
 

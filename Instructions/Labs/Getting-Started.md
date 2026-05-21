@@ -2,13 +2,20 @@
 
 ### Overall Estimated Duration: 8 Hours
 
-## Overview
+## 📘 Lab Scenario
 
-In this hands-on lab, you will work with **Microsoft Fabric** to build a complete, cloud-scale analytics solution for managing and analyzing large volumes of e-commerce transaction data. You will create data pipelines to continuously ingest transactional information, store it in a scalable data warehouse, and run real-time analytics to monitor live data streams for instant insights. You will also leverage **Apache Spark** for complex analysis and machine learning, use **Dataflows Gen2** to clean and transform data, and explore the dataset interactively with notebooks.
+**Contoso Retail**, a global e-commerce company, is modernizing its analytics platform using **Microsoft Fabric** to improve data-driven decision-making. The company needs a **centralized solution** to ingest, process, analyze, and monitor large volumes of transaction data in real time.
 
-By the end of this lab, you will have practical experience in setting up an integrated data environment that enables real-time, data-driven decision-making and helps optimize business strategies effectively.
+As a **Data Engineer/Analyst** at Contoso, you will build an end-to-end analytics solution using **Microsoft Fabric**. Throughout this lab, you will create fabric workspace, ingest and transform data, analyze business insights, enable real-time analytics, and use machine learning and Apache Spark to support Contoso’s enterprise analytics initiatives.
 
-## Objective
+
+## 📖 Lab Overview
+
+In this hands-on lab, you will use **Microsoft Fabric** to work with enterprise-scale analytics and data processing solutions. You will explore **key Fabric capabilities** including data ingestion, data warehousing, real-time analytics, machine learning, Apache Spark, and Dataflow Gen2.
+
+By the end of this lab, you will gain practical experience in building and managing modern analytics workflows that support scalable and efficient data-driven operations.
+
+## 🎯 Objective
 
 This lab is designed to equip participants with hands-on experience in creating a workspace to manage data, ingesting it via pipelines, analyzing it in a data warehouse, performing real-time analytics, training models using notebooks, leveraging Apache Spark for complex analysis, and designing advanced data transformations with Dataflow Gen2.
 
@@ -26,7 +33,7 @@ This lab is designed to equip participants with hands-on experience in creating 
 
 1. **Create a Dataflow (Gen2) in Microsoft Fabric:** Design and implement advanced data transformation workflows using Dataflow Gen2 for enhanced data integration and processing. Participants will design and execute sophisticated data transformation processes for integration and processing.
 
-## Prerequisites
+## ⚙️ Prerequisites
 
 Participants should have:
 
@@ -35,15 +42,15 @@ Participants should have:
 - Familiarity with machine learning concepts and experience with programming languages like Python or R
 - Understanding of distributed computing principles and experience with data processing frameworks like Apache Spark.
 
-## Architecture
+## 🏗️ Architecture
 
-Microsoft Fabric offers a comprehensive suite of services to manage and analyze data at scale. Participants can set up a central workspace for project management, automate data ingestion with pipelines, and perform complex queries using its data warehouse capabilities. Real-time data processing is supported through a dedicated analytics engine, while interactive notebooks facilitate machine learning model development. Apache Spark provides scalable data processing, and advanced data transformations are handled by Dataflow Gen2. Together, these tools enable efficient data management, real-time insights, and scalable analytics across diverse data scenarios.
+**Microsoft Fabric** offers a comprehensive suite of services to manage and analyze data at scale. Participants can set up a central workspace for project management, automate data ingestion with pipelines, and perform complex queries using its data warehouse capabilities. Real-time data processing is supported through a dedicated analytics engine, while interactive notebooks facilitate machine learning model development. Apache Spark provides scalable data processing, and advanced data transformations are handled by Dataflow Gen2. Together, these tools enable efficient data management, real-time insights, and scalable analytics across diverse data scenarios.
 
-## Architecture Diagram
+## 🖼️ Architecture Diagram
 
    ![](./Images/architecture-diagram-1108.png)
 
-## Explanation of Components
+## 🔍 Explanation of Components
 
 The architecture for this lab involves several key components of Microsoft Fabric:
 
@@ -55,7 +62,7 @@ The architecture for this lab involves several key components of Microsoft Fabri
 - **Apache Spark on Microsoft Fabric:** A distributed computing service for performing large-scale data processing and analytics using Spark clusters.
 - **Dataflow Gen2:** A service for designing and executing advanced data transformation workflows, enabling efficient data integration and processing.
 
-## Getting Started with the Lab
+## 🚀 Getting Started with the Lab
  
 Welcome to your MS Fabric Foundation for Enterprise Analytics workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
@@ -73,13 +80,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
 
-   ![](./Images/env.png)
+   ![](./Images/env-2005.png)
 
 ## Utilizing the Split Window Feature
 
 Utilizing the Split Window Feature: For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
-   ![](./Images/split.png)
+   ![](./Images/split-2005.png)
 
 ## Managing Your Virtual Machine
  
@@ -113,7 +120,7 @@ To adjust the zoom level for the environment page, click the A↕ : 100% icon lo
      
 1. Now enter the following password and click on **Sign in**.
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject> 
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> 
 
       ![05](./Images/GSpwd.png)
      
@@ -130,7 +137,7 @@ To adjust the zoom level for the environment page, click the A↕ : 100% icon lo
    ![](./Images/freetrial.png)
    
 
-## Support Contact
+## 📞 Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 

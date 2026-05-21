@@ -2,9 +2,17 @@
 
 ### Estimated Duration: 50 Minutes
 
-In this exercise, you'll explore data ingestion and transformation in Microsoft Fabric using Dataflow Gen2. You'll begin by creating a Dataflow to import and shape sales data using Power Query Online. Then, you'll define a lakehouse as the data destination, configure column mappings, and publish the Dataflow. Finally, you'll integrate the Dataflow into a pipeline to automate data processing and verify that the transformed data is successfully loaded into the lakehouse for future analysis.
+## 📘 Scenario
 
-## Objectives
+Contoso Retail’s data integration team needs a streamlined process to ingest, transform, and load sales order data into the organization’s Lakehouse environment. To support this workflow, the team plans to use Dataflow Gen2 and pipelines in Microsoft Fabric to automate data preparation and loading processes.
+
+In this exercise, you will help Contoso create a Dataflow Gen2 to ingest and transform sales data, configure a Lakehouse destination for the processed data, and integrate the Dataflow into a pipeline for automated execution.
+
+## 📖 Overview
+
+In this exercise, you will use Dataflow Gen2 in Microsoft Fabric to ingest and transform sales order data using Power Query Online. You will create a Dataflow, apply data transformations, configure a Lakehouse destination, publish the Dataflow, and integrate it into a pipeline to automate data processing and loading into the Lakehouse.
+
+## 🎯 Objectives
 
 In this exercise, you will be able to complete the following tasks:
 
@@ -16,21 +24,17 @@ In this exercise, you will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. From the left navigation pane, select your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace, click on **+ New item (2)**. 
+1. In the left pane, navigate to **Workspaces (1)** icon and select **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**. 
 
-    ![](./Images/p7t1p1.png)
+    ![](./Images/p1t3p3.png)
 
-1. In the Search box search for **Dataflow Gen2 (1)** and select **Dataflow Gen2 (2)**. 
+1. Click on **+ New item (1)** to create a new lakehouse. In the search box, search for **Dataflow Gen 2 (2)** and select **Dataflow Gen 2 (3)** from the list. 
 
-   ![](./Images/E6T1S2-1208.png)
+   ![](./Images/06/E6T1S2-2005.png)
    
-1. Enter the below-mentioned details to create the Dataflow and click on **Create (3)**.
+1. Keep as default **(1)** and click on **Create (2)**. After a few seconds, the Power Query editor for your new data flow will open.
 
-   - **Name:** Keep as default **(1)**
-   
-      ![](./Images/E6T1S3.png)
-
-   After a few seconds, the Power Query editor for your new dataflow will open.
+   ![](./Images/E6T1S3.png)
 
 1. From the center **Get data** pane, select **Import from a Text/CSV file**.
 
@@ -69,13 +73,15 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
    ![](./Images/e6s12.png)
 
-4. On the **Close** confirmation dialog box, click **Yes** to confirm and exit.  
+4. On the **Close** confirmation dialog box, click **Save and close** to confirm and exit.  
 
-   ![](./Images/e6s13.png)
+   ![](./Images/06/E6T1S11-2005.png)
 
-1. From the left pane, go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** Lakehouse, and then right-click on the **orders (2)** file and click on **Delete (3)**.
+1. From the top menu, go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** Lakehouse, and then right-click on the **orders (2)** file and click on **Delete (3)**.
 
-   ![](./Images/E6T1S9-1208.png)
+   ![](./Images/06/E6T1S12-2005.png)
+
+   ![](./Images/06/E6T1S12a-2005.png)
 
 1. On the **Delete "orders"?** pop-up, click **Delete**.
    
@@ -85,7 +91,9 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
 In this task, you’ll add a data destination for the Dataflow to determine where the ingested and transformed data will be stored for future use.
 
-1. Go back to the previous tab where the Dataflow Gen2 is opened. 
+1. From the left navigation pane, select your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace, and click on the **Dataflow 1 (2)** you created in the previous task.
+
+   ![](./Images/06/E6T2S1-2005.png) 
 
 1. In the **Query Settings** in the right pane, click on **+ (1)** for Data destination, then choose **Lakehouse (2)** from the drop-down menu.
 
@@ -101,6 +109,8 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
    ![](./Images/p7t2p4.png)
 
+   > **Note:** If you are unable to select the Lakhouse, please expand it and select any folder created under it.
+
 1. On the Destination settings page, observe that **MonthNo** is not selected in the Column mapping, and an informational message is displayed.
 
    ![](./Images/E6T2S4-1208.png)
@@ -113,23 +123,23 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
    ![](./Images/E6T2S7.png)
 
-1. After publishing, you will be taken back to the home page of the **Fabric portal**. Wait for a few minutes for the Publish to complete, then open the **Dataflow**. 
+1. After publishing, you will be navigated away from the Dataflow page. Wait for a few minutes for the Publish to complete, then open the **Dataflow**. 
 
 1. Click on the **Dataflow (1)** on the top left, and rename the dataflow as **Transform Orders Dataflow (2)**.
 
-   ![](./Images/p7t2p9.png)
+   ![](./Images/06/E6T2S9-2005.png)
 
 ## Task 3: Add a dataflow to a pipeline
 
 In this task, you’ll add a dataflow to a pipeline to streamline the data processing workflow and enable automated data transformations.
 
-1. From the left navigation pane, select your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace, click on **+ New item (2)**. 
+1. In the left pane, navigate to **Workspaces (1)** icon and select **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**. 
 
-    ![](./Images/E1T3S2-1108.png)
+    ![](./Images/p1t3p3.png)
 
-1. In the search box, search for **Pipeline (1)**, and select **Pipeline (2)**.
+1. Click on **+ New item (1)** to create a new lakehouse. In the search box, search for **Pipeline (2)** and select **Pipeline (3)** from the list.
 
-    ![](./Images/p7t3p2.png)
+    ![](./Images/06/E6T3S2-2005.png)
 
 1. Set the Name as **Load Orders pipeline (1)** and click on **Create (2)**. This will open the pipeline editor.
 
@@ -141,7 +151,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
    ![](./Images/p7t3p4.png)
 
-1. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in **Dataflow** drop-down list, select **Transform Orders Dataflow (3)** (the data flow you created previously).
+1. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in the **Dataflow** drop-down list, select **Transform Orders Dataflow (3)** (the data flow you created previously).
 
    ![Empty data pipeline.](./Images/E6T3S5-1208.png)
    
@@ -155,7 +165,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
    
    ![](./Images/p7t3p7.png)
 
-1. From the left navigation pane, select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** Lakehouse.
+1. From the left navigation pane, select **fabric-<inject key="DeploymentID" enableCopy="false"/>** then select the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** Lakehouse.
 
 1. Expand the **Tables** section and verify that the **orders** table is created by your dataflow.
 
@@ -163,7 +173,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
    >**Note:** You might have to refresh the browser to get the expected output.
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you:
 
@@ -171,8 +181,10 @@ In this exercise, you:
 - Added a **data destination** to store the output of the Dataflow.
 - Integrated the **Dataflow into a pipeline** for automated data processing.
 
-## Conclusion
+### 🎉 You have successfully completed the Hands-on lab.
 
-By completing this **MS Fabric Foundation for Enterprise Analytics** hands-on lab, you have gained valuable, hands-on experience with the end-to-end capabilities of Microsoft Fabric for enterprise analytics. Starting from creating a collaborative workspace, you have learned to ingest and prepare data using pipelines, perform advanced analyses in a data warehouse, and access real-time insights through live analytics. You also practiced training machine learning models in notebooks, harnessed the scalability of Apache Spark for large-scale analysis, and designed sophisticated data transformation workflows with Dataflow Gen2. This comprehensive journey empowers you to confidently manage, analyze, and transform data, equipping you with practical skills to drive informed, data-driven decision-making within your organization.
+By completing this hands-on lab, you have successfully implemented an end-to-end analytics and data processing solution using Microsoft Fabric for Contoso Retail. Throughout the lab, you worked through practical data engineering, analytics, and reporting tasks that closely align with real-world enterprise data workflows. You helped Contoso Retail establish a centralized analytics environment by creating workspaces, Lakehouses, and data warehouses to organize and manage business data efficiently. You automated data ingestion using pipelines and Dataflow Gen2, transformed and processed sales data using notebooks and Apache Spark, and enabled structured analysis through SQL, semantic models, and Power BI reports.
 
-## You have successfully completed the Hands-on lab.
+You also explored Real-Time Analytics using KQL to query operational data, worked with Delta tables and streaming data scenarios, and trained machine learning models using notebooks and MLflow to compare and track model performance. Additionally, you created visualizations and reports that support business analysis and data-driven decision-making. This lab demonstrated how Microsoft Fabric can unify data ingestion, transformation, analytics, machine learning, and reporting capabilities within a single platform. The tasks performed in this lab reflect common real-world responsibilities of data engineers, data analysts, and analytics teams working with enterprise-scale data solutions.
+
+

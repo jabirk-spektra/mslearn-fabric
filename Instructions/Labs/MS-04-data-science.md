@@ -2,9 +2,16 @@
 
 ### Estimated Duration: 90 Minutes
 
-In this exercise, you'll build a machine learning workflow in Microsoft Fabric using notebooks. You'll begin by uploading churn data into a lakehouse and creating a notebook. Then, you’ll load the data into a dataframe and train classification models using Scikit-Learn. With MLflow integration, you’ll track experiments, compare model performance, and visualize results. Finally, you'll save the best-performing model and end the Spark session to complete the development cycle.
+## 📘 Scenario
 
-## Objectives
+Contoso Retail’s analytics team wants to explore machine learning techniques to better understand customer churn patterns. To support this initiative, the team plans to use Microsoft Fabric notebooks and MLflow to train, compare, and track machine learning models using customer churn data.
+
+## 📖 Overview
+
+In this exercise, you will use notebooks in Microsoft Fabric to build a machine learning workflow. You will upload and load churn data into a dataframe, train classification models using Scikit-Learn, track experiments with MLflow, compare model performance, and save the best-performing model for future predictions.
+By the end of this exercise, you will have hands-on experience in using Microsoft Fabric notebooks for data science tasks, including data preparation, model training, experiment tracking, and model management.
+
+## 🎯 Objectives
 
 In this exercise, you will be able to complete the following tasks:
 
@@ -23,11 +30,11 @@ In this task, you will create a lakehouse and upload files to facilitate data st
 
 1. From the left navigation pane, go to your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace and select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-   ![](./Images/p5t1p1.png)
+   ![](./Images/04/E4T1S1-2005.png)
 
 1. In the Lakehouse, from the **Ellipsis ... (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
 
-   ![](./Images/E4T1S2-1208.png)
+   ![](./Images/04/E4T1S2-2005.png)
 
 1. On the Upload files page, click on the **Browse (1)** option to upload the file. Go to the **`C:\LabFiles\Files` (2)** location, select the **churn.csv (3)** file, and click on **Open (4)**. Then click on **Upload (5)**. Close the pane.
 
@@ -37,19 +44,19 @@ In this task, you will create a lakehouse and upload files to facilitate data st
 
 1. After the files have been uploaded, expand **Files** and verify that the CSV file has been uploaded.
 
-   ![](./Images/E4T1S4-1208.png)
+   ![](./Images/04/E4T1S4-2005.png)
 
 ## Task 2: Create a notebook
 
 In this task, you will create a notebook to facilitate model training and experimentation. Notebooks offer an interactive environment where you can write and execute code in multiple languages, allowing you to conduct experiments effectively.
 
-1. From the left navigation, select your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace and click on **+ New item (2)**.
+1. From the left navigation pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left pane and select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-    ![](./Images/E1T3S2-1108.png) 
+    ![](./Images/04/E4T2S1-2005.png) 
 
-2. In the New Item panel, search for **Notebook (2)** and select **Notebook (3)**.
+2. Click on **+ New item (1)**. In the New Item panel, search for **Notebook (2)** and select **Notebook (3)**.
 
-    ![](./Images/E4T2S2-1208.png)
+    ![](./Images/04/E4T2S2-2005.png)
 
 1. On the **New Notebook** dialog, click **Create**.
 
@@ -77,7 +84,7 @@ In this task, you will create a notebook to facilitate model training and experi
 
 In this task, you will load data into a dataframe to prepare for model training. Dataframes in Spark, akin to Pandas dataframes in Python, offer a structured way to work with data in rows and columns, enabling efficient data manipulation and analysis.
 
-1. In the Explorer pane, Click **Add data items (1)** drop-down under explorer and select **From OneLake catalog (2)** from the drop-down.
+1. In the Explorer pane, click **Add data items (1)** drop-down under explorer and select **From OneLake catalog (2)** from the drop-down.
 
     ![](./Images/01/E1T5S5.png)  
 
@@ -113,7 +120,7 @@ In this task, you will load data into a dataframe to prepare for model training.
 
     > **Note:** Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can take a minute or so to complete. Subsequent runs will be quicker.
 
-    > **Note:** **If you face any error stating **"Too many Requests for Capacity with error code 430"(1)**, navigate to **Monitor(2)** section to see if there are any ongoing spark jobs running if yes we can wait for it to finish or stop the process.**
+    > **Note:** **If you face any error stating **"Too many Requests for Capacity with error code 430"(1)**, navigate to **Monitor(2)** section to see if any ongoing spark jobs are running. If yes, we can wait for it to finish or stop the process.**
 
     ![](./Images/E4T3S7i.png)
 
@@ -251,7 +258,7 @@ In this task, you will explore your experiments in Microsoft Fabric, which track
 
 1. In the left pane, navigate to your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, you will see the **experiment-churn (2)** Experiment created.
 
-   ![](./Images/E4T6S1-1208.png)
+   ![](./Images/04/E4T6S1-2005.png)
 
     > **Note:** If you don't see any logged experiment runs, refresh the page. 
 
@@ -322,9 +329,9 @@ In this task, you will save the best-performing machine learning model after com
 
 In this task, you will save your notebook with a meaningful name to preserve your work after training and evaluating the models. Additionally, you will end the Spark session to free up resources and finalize your data processing environment.
 
-1. Select **Notebook_1** from the left navigation pane that you created in the notebook menu bar.
+1. Select **Notebook_1** from the top menu bar.
 
-   ![](./Images/Note4.png)
+   ![](./Images/04/E4T8S1-2005.png)
 
 2. Click on the ⚙️ **Settings (1)** icon to view the notebook settings, and Set the **Name** of the notebook to **Train and compare models notebook (2)**, and then close the settings pane.
 
@@ -338,7 +345,7 @@ In this task, you will save your notebook with a meaningful name to preserve you
 
    >**Note:** If you can't see the **Stop Session** option, it means the Spark session has already ended.
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you:
 

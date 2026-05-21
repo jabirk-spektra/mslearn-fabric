@@ -2,9 +2,17 @@
 
 ### Estimated Duration: 90 Minutes
 
-In this exercise, you'll ingest data into a Microsoft Fabric lakehouse using pipelines and Apache Spark. Pipelines allow you to extract data from external sources and load it into OneLake. Spark enables you to transform the data at scale before storing it in lakehouse tables for analysis. Ensure data is successfully loaded into OneLake before applying transformations.
+## 📘 Scenario
 
-## Objectives
+**Contoso Retail** has recently migrated its sales analytics platform to **Microsoft Fabric**. The analytics team needs a centralized solution to ingest, store, transform, and analyze sales transaction data for reporting purposes.
+
+In this exercise, you will help Contoso set up a Fabric workspace, create a Lakehouse, ingest sales data using pipelines, transform the data with notebooks, query the processed data using SQL, and create visual reports for business analysis.
+
+## 📖 Overview
+
+In this exercise, you will use **Microsoft Fabric** to ingest and analyze sales data using a **Lakehouse architecture**. You will create a workspace and Lakehouse, build a data pipeline to load sales data into OneLake, transform the data using notebooks, query the processed data with SQL, and create basic visualizations and reports for analysis.
+
+## 🎯 Objectives
 
 In this exercise, you will be able to complete the following tasks:
 
@@ -27,7 +35,7 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 1. On the **Activate your 60-day free Fabric trial capacity** dialog box, click **Activate**.  
 
-    ![](./Images/p1t1p2.png)
+    ![](./Images/01/E1T1S2-2005.png)
 
 1. On the **Successfully upgraded to Microsoft Fabric** pop-up, click **OK**.
 
@@ -39,7 +47,7 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right again, and verify **Fabric and Power BI trial status (2)**.
 
-    ![Account-manager-start](./Images/img-01-new.png)
+    ![Account-manager-start](./Images/01/E1T1S3-2005.png)
 
 ## Task 2: Create a workspace
 
@@ -50,7 +58,11 @@ In this task, you will create a Fabric workspace. The workspace will contain all
     ![](./Images/p1t2p1.png)
 
 1. On the **Create a workspace** page, enter the following details:
+
     - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**
+
+        >Note: The name may appear as a space between **fabric-** and the **unique ID**, but ideally, it does not have any spaces. Please make sure to remove any spaces while entering the name.
+
     - Expand the **Advanced (2)** section.
 
       ![name-and-desc-of-workspc](./Images/f3.png)
@@ -67,15 +79,17 @@ In this task, you will create a Fabric workspace. The workspace will contain all
 
 1. In the **Workspace**, select **Manage access** from the top menu.
 
-     ![](./Images/fabric-workspace.png)
+     ![](./Images/01/E1T2S4-2005.png)
 
 1. In the Manage access pane, **select + Add people or groups**
 
-    ![](./Images/powerbi-add-ppl.png)
+    ![](./Images/01/E1T2S5-2005.png)
 
 1. In the **Add people** pane, paste the SPN `https://aec-svc/` **(1)**, then select the **Admin (2)**, and click **Add (3)**.
 
-     ![](./Images/spn-01.png)
+     ![](./Images/01/E1T2S6-2005.png)
+
+1. You can close the Manage access window.
 
 ## Task 3: Create a Lakehouse
 
@@ -97,16 +111,23 @@ In this task, switch to the Data engineering experience and create a new Lakehou
 
 1. Click on **+ New item (1)** to create a new lakehouse. In the search box, search for **Lakehouse (2)** and select **Lakehouse (3)** from the list.
 
-    ![](./Images/e1t3s4.png)
+    ![](./Images/01/E1T3S4-2005.png)
 
-1. Enter the **Name** as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**. Ensure that the **Lakehouse schema** option is unchecked, as it is selected by default when creating the **Lakehouse**. Then click **Create (2)**.
+1. Enter the following details and click on **Create (4)**:
 
-    ![](./Images/E1T3S5-1.png) 
-    > **Note**: Please make sure to uncheck the checkbox of Lakehouse schemas while creating the lakehouse  
+    - **Name**: **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**. 
+
+    - **Location:** **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**
+    
+    - **Lakehouse Scehmas:** **Unchecked (3)**
+        > **Note:** Make sure to uncheck the Lakehouse schemas while creating the Lakehouse, as checking it would cause issues in the later exercises. 
+
+        ![](./Images/01/E1T3S5-2005.png) 
+
 
 1. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the left pane, click the **Ellipsis (...) (1)** menu for the **Files** node, click on **New subfolder (2)**.
     
-    ![](./Images/E1T3S6.png)
+    ![](./Images/01/E1T3S6-2005.png)
 
 1. Enter the Folder name as **new_data (1)** and click on **Create (2)**.
 
@@ -122,13 +143,14 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
     ![](./Images/p1t4p1(1).png)
 
-1. In the search box, search for **pipeline (1)** and select **Pipeline (2)** under **Get data** from the list.
+1. In the search box, search for **pipeline (1)** and select **Pipeline (2)**.
 
-    ![](./Images/e1t4s2.png)
+    ![](./Images/01/E1T4S2-2005.png)
 
 1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
     
-    ![](./Images/Lake9-new.png)
+    ![](./Images/01/E1T4S3-2005.png)
+
     > **Note**: By Default the name of the pipeline is Pipeline_1, Please change it to as mentioned above.
    
 1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant (1)**.
@@ -150,9 +172,11 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
     
 1. On the **Choose data** page, keep the default settings and click **Next**.
     
-    ![05](./Images/img-05.png)
+    ![05](./Images/01/E1T4S7-2005.png)
    
 1. Wait for the data to be sampled, then verify the following settings:
+
+    > **Note:** Click anywhere on the Choose data window to enable the view. 
 
    - **File format:** DelimitedText **(1)**
    - **Column delimiter:** Comma (,) **(2)**
@@ -166,7 +190,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
 1. On the **Choose data destination** page, click **OneLake catalog (1)** and select the lakehouse **Lakehouse\_<inject key="DeploymentID" enableCopy="false"/> (2)**.
     
-    ![](./Images/img-07.png)
+    ![](./Images/01/E1T4S9-2005.png)
 
 1. On the **Settings** page, select **Full copy (1)**. Under **Destination root folder**, select **Files (2)**, and then click **Next (3)**.
 
@@ -177,35 +201,37 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
    - Folder path: Click on **Browse (1)**, select **new_data (2)** and click **OK (3)**.
    - File name: **sales.csv (4)**
 
-     ![08](./Images/img-08.png)
+     ![08](./Images/01/E1T4S11a-2005.png)
 
-     **Note:** Expand the file format settings.
+     ![08](./Images/01/E1T4S11b-2005.png)
+
+1. Expand the file format settings and select the following options:
+
+   - File format: **DelimitedText (1)**
+   - Expand the **File format settings**
+   - Column delimiter: **Comma (,) (2)**
+   - Row delimiter: **Line feed (\n) (3)**
+   - Click **Next (4)**
 
      ![08](./Images/E1T1S11.png)
 
-   - File format: **DelimitedText (6)**
-   - Expand the **File format settings**
-   - Column delimiter: **Comma (,) (7)**
-   - Row delimiter: **Line feed (\n) (8)**
-   - Click **Next (9)**
-
-     ![08](./Images/img-09.png)
+     ![08](./Images/01/E1T4S12.2-2005.png)
 
 1. On the **Review + save** page, review the details of your copy operation and then select **Save**.
 
-    ![08](./Images/img-10.png)
+    ![08](./Images/01/E1T4S13-2005.png)
 
 1. A new pipeline containing a **Copy job** activity is created, as shown here:
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/img-11.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/E1T4S14-2005.png)
 
 1. Click on the **Copy job (1)**, then select the **Settings (2)** tab, from the Connection dropdown **(3)**, select **Browse all (4)**.
 
-    ![08](./Images/img-12.png)
+    ![08](./Images/01/E1T4S15-2005.png)
 
 1. On **Choose a data source to get started**, click on **Copy job**.
 
-    ![08](./Images/p1t4p10(5).png)
+    ![08](./Images/01/E1T4S16-2005.png)
 
 1. On the **Connect data source** page, click on **Sign in (1)** and select **<inject key="AzureAdUserEmail"></inject> (2)**. Then click **Connect (3)**.
 
@@ -217,7 +243,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
 1. Under the **Home** tab, click on **Run**.
 
-    ![08](./Images/img-13.png)
+    ![08](./Images/01/E1T4S18-2005.png)
 
 1. On the **Save and run?** pop-up, click **Save and run**.
 
@@ -225,7 +251,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
 1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has been successfully updated.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/img-14.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/E1T4S20-2005.png)
 
 1. On the **Workspaces** page, select **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and click **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)** to open the lakehouse.  
 
@@ -245,7 +271,7 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
 1. Click on **+ New item (1)** In the New Item panel, search for **Notebook (2)** and select **Notebook (3)**.
 
-    ![](./Images/e1t5s2.png) 
+    ![](./Images/01/E1T5S2-2005.png) 
 
 1. In the **New Notebook** pop-up window, leave the name as **default (1)** and click **Create (2)**.
 
@@ -253,9 +279,9 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
 1. After a few seconds, a new notebook with a single cell opens. Each notebook consists of code or markdown cells used for running code or adding formatted text.
 
-     > **Note:** If a pop-up appears for **Enhance your notebook experience with AI tools**, click on **Skip tour**.
+     > **Note:** If a pop-up appears for **Note Copilot updates and Git Integration Supporting resources**, click on **Skip for now**.
      >
-     > ![](./Images/01/skip_tour.png)
+     > ![](./Images/01/skip-tour.png)
 
 1. Click **Add data items (1)** drop-down under explorer and select **From OneLake catalog (2)** from the drop-down.
 
@@ -321,7 +347,7 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
     ![.](./Images/E1T5S12.png)
 
-1. Navigate back to the **Notebook** on the left pane and use the ⚙️ **Settings (1)** icon at the top to view the notebook settings. Then, set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
+1. On the left pane in Notebook, use the ⚙️ **Settings (1)** icon at the top to view the notebook settings. Then, set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
      ![.](./Images/E1T5S13-1208.png)
 
@@ -407,9 +433,13 @@ In this task, you'll create a report to visualize your data findings. You'll sel
     
     ![](./Images/e1p2t8p1.png)
 
-2. Provide the Direct Lake semantic model name as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and select **sales (2)** table from the list. Click on **Confirm (3)**.
+2. On the New Smantic Model window, enter the following details and click on **Confirm (4)**:
 
-    ![](./Images/semanticmodel_1.png)
+    - DIrect Lake semantic model name: **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**
+    - Storage mode: **Direct Lake on SQL (2)**
+    - Select the sales table to be included in the model **(3)**
+
+    ![](./Images/01/E1T8S2-2005.png)
 
 3. Go back to the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the left pane. Select recently created semantic model named as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**
 
@@ -460,7 +490,7 @@ In this task, you'll create a report to visualize your data findings. You'll sel
 
 <validation step="09d5de71-ba8a-42fa-a261-b57c69f32b12" />
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you:
 
