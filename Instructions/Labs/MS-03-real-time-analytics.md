@@ -2,9 +2,17 @@
 
 ### Estimated Duration: 75 Minutes
 
-In this exercise, you'll explore real-time analytics in Microsoft Fabric using Kusto Query Language (KQL). You'll begin by creating a KQL database and importing sales data into a table. Then, you'll run KQL queries to analyze the data and create a query set. Using this query set, you’ll build a Power BI report to visualize results. Finally, you'll simulate real-time data ingestion using Spark Structured Streaming and Delta tables to process and query IoT-like data dynamically.
+## 📘 Scenario
 
-## Objectives
+Contoso Retail’s analytics team now requires real-time visibility into operational and sales data to support faster business analysis and monitoring. To achieve this, the team plans to use Real-Time Analytics capabilities in Microsoft Fabric for querying live and historical data streams.
+
+In this exercise, you will help Contoso create a KQL database, ingest sales data for analysis, run KQL queries to extract insights, build reports from query results, and simulate streaming IoT device data using Delta tables and Spark Structured Streaming.
+
+## 📖 Overview
+
+In this exercise, you will explore Real-Time Analytics capabilities in Microsoft Fabric using Kusto Query Language (KQL). You will create a KQL database, ingest and query sales data, create a Power BI report from KQL query results, and use Delta tables with Spark Structured Streaming to process simulated streaming data in real time.
+
+## 🎯 Objectives
 
 In this exercise, you will be able to complete the following tasks:
 
@@ -15,21 +23,23 @@ In this exercise, you will be able to complete the following tasks:
   
 ## Task 1: Create a KQL database
 
-In this task, you will create a KQL database to facilitate querying of static or streaming data. You will define a table within the KQL database and ingest sales data from a file to enable effective analysis using Kusto Query Language (KQL).
+In this task, Contoso needs to set up a KQL database to analyze sales data. You will create an Eventhouse, set up a KQL database, and ingest sales data from a CSV file to enable querying and analysis using KQL.
 
-1. From the left navigation pane, click on **Workspaces (1)** from the left pane and select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+> **Information:** In this task, you are importing a static file to create a table in your KQL database. This allows you to run KQL queries on the data in the table. In reality, you can also set up streaming data ingestion into KQL databases from sources such as Azure Event Hubs or Azure IoT Hub, enabling real-time analytics on streaming data. 
 
-    ![](./Images/p2t1p1.png)
+1. From the left navigation pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left pane and select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+
+    ![](./Images/04/E4T2S1-2005.png)
    
 1. Click on **+ New item (1)** and in the New item, search for **Eventhouse (2)** and select **Eventhouse (3)** from the **Store data** list.
 
-    ![](./Images/p4t1p2.png)
+    ![](./Images/03/E3T1S2-2005.png)
 
 1. Enter the **Eventhouse name** as **Eventhouse-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create (2)**.
 
     ![](./Images/p4t1p3.png)
 
-1. In the **Welcome to Eventhouse!** pop-up window, click on **Get started**.
+1. In the **Welcome to Eventhouse!** pop-up window, click on **Get started** and close the pop-up windows that follow.
 
     ![](./Images/p4t1p4.png)
 
@@ -71,16 +81,15 @@ In this task, you will create a KQL database to facilitate querying of static or
       - Review the preview of the table and close the wizard.
 
         ![01](./Images/e3t1s7.2.png)
-    
-> **Note:** In this example, you imported a very small amount of static data from a file, which is fine for this exercise. In reality, you can use Kusto to analyze much larger volumes of data, including real-time data from a streaming source such as Azure Event Hubs.
+
 
 ## Task 2: Use KQL to query the sales table
 
-In this task, you will use Kusto Query Language (KQL) to query the sales table in your KQL database. With the data now available, you can write KQL code to extract insights and perform analysis on the sales data.
+In this task, you will use Kusto Query Language (KQL) to analyze the sales data that you ingested into your KQL database. You will run a series of KQL queries to extract insights from the sales data, such as filtering for specific products, analyzing sales over time, and summarizing revenue by product.
 
 1. In the **Eventhouse-<inject key="DeploymentID" enableCopy="false"/>**, make sure you have the **sales** table highlighted. Click on sales **Ellipsis ... (1)** table, select the **Query with code (2)** drop-down, and from there select **Show any 100 records (3)**.
 
-    ![](./Images/E3T2S1-1208.png)
+    ![](./Images/03/E3T2S1-2005.png)
 
 1. A new pane will open with the query and its result. 
 
@@ -130,13 +139,13 @@ In this task, you will use Kusto Query Language (KQL) to query the sales table i
 
 In this task, you will create a Power BI report using your KQL Queryset as the foundation for the analysis. This allows you to visualize and present the insights derived from your KQL queries in an interactive and user-friendly format within Power BI.
 
-1. In the query workbench editor for your query set, click on **Create Power BI Report** and wait for the report editor to open.
+1. In the query workbench editor for your query set, click on **Power BI Report** to create the report and wait for the report editor to open.
 
-    ![](./Images/E3T3S1-1208.png)
+    ![](./Images/03/E3T3S1-2005.png)
 
-    >**Note:** If you are unable to see the Create Power BI Report option, click on **More (1)** and then select **Create Power BI Report (2)**. 
+    >**Note:** If you are unable to see the Power BI Report option, click on **More (1)** and then select **Power BI Report (2)** to create the report. 
   
-      ![](./Images/E3T3S1.1-1208.png)
+      ![](./Images/03/E3T3S1a-2005.png)
   
 1. In the report editor, from the **Data** pane, expand **Kusto Query Result** and select the checkboxes of **Item** and **TotalNet Revenue (1)** fields.
 
@@ -152,7 +161,7 @@ In this task, you will create a Power BI report using your KQL Queryset as the f
 
     ![](./Images/03/E3T3S5.png)
 
-    > Note: If you are unable to choose the workspace as instructed above please follow the below steps.
+1. If you are unable to choose the workspace as instructed above please follow the below steps below other wise you can skip to step 7:
 
     - When you save the report,In the **Just a few details first** pane, enter the file name as **Revenue by Item (1)** and click **Continue (2)** to save the report in Power BI.
 
@@ -189,11 +198,11 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
 
 1. Navigate back to your **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace and open **Load Sales Notebook (2)**.
 
-    ![](./Images/p4t4p1.png)
+    ![](./Images/03/E3T4S1-2005.png)
 
 1. Add a new code cell in the notebook using **+ Code (1)**. Then, in the new cell, add the following code **(2)** and click on the run cell icon **(3)**:
 
-   ![](./Images/E3T4S2.png)
+   ![](./Images/03/E3T4S2a-2005.png)
 
    ```python
    from notebookutils import mssparkutils
@@ -241,7 +250,9 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
    print("Streaming to delta sink...")
     ```
 
-    ![](./Images/E3T2S4-1803.png)
+    ![](./Images/03/E3T4S4-2005.png)
+
+    ![](./Images/03/E3T4S4a-2005.png)    
 
 1. Add a new code cell by clicking on **+ Code (1)**. Add the following code **(2)** and click on the run cell icon **(3)**. This code queries the **IotDeviceData** table, which contains the device data from the streaming source. 
 
@@ -253,16 +264,16 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
     
     ![](./Images/E3T4S7-1208.png)
 
->Note: If you encounter an error indicating that the IOTDeviceData table is not found after running the above command, execute the command below to create the table. Once the table is created, re-run the previous step :
-`SELECT * FROM IOTDeviceData;`
+    > **Note:** If you encounter an error indicating that the IOTDeviceData table is not found after running the above command, execute the command below to create the table. 
 
-```SQL
-%%sql
+    > ```SQL
+    > %%sql
+    > CREATE TABLE iotdevicedata
+    > USING DELTA
+    > LOCATION 'Tables/dbo/iotdevicedata';
+    > ```
 
-CREATE TABLE iotdevicedata
-USING DELTA
-LOCATION 'Tables/dbo/iotdevicedata';
-```
+    > Once the table is created, re-run the previous step : `SELECT * FROM IotDeviceData;`
 
 1. Add a new code cell by clicking on **+ Code**. Add the following code and click on the run cell icon. This code writes more hypothetical device data to the streaming source.
 
@@ -278,6 +289,8 @@ LOCATION 'Tables/dbo/iotdevicedata';
 
    mssparkutils.fs.put(inputPath + "more-data.txt", more_data, True)
     ```
+
+    ![](./Images/03/E3T4S6-2005.png)
 
 1. Re-run the cell containing the code below. This code queries the **IotDeviceData** table again, which should now include the additional data that was added to the streaming source.
 
@@ -301,9 +314,9 @@ LOCATION 'Tables/dbo/iotdevicedata';
 
     > **Note:** Make sure the session is stopped, otherwise the new notebooks doesn't work.
 
-    ![](./Images/p4t4p9.png)
+    ![](./Images/03/E3T4S9-2005.png)
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you:
 - Created a Lakehouse to store and manage structured data.
