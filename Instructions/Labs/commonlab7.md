@@ -22,11 +22,11 @@ In this task, you will assign yourself the **Fabric Administrator role** in Micr
 
     ![Navigate-To-AAD](./Images/ws/Fab3.png)
 
-1. Under **Manage (1)**, Navigate to **Roles and administrators (2)**.
+1. On the left navigation menu, under **Manage (1)**, Navigate to **Roles and administrators (2)**.
 
     ![Roles-and-Administrator](./Images/ws/Fab4.png)
 
-1. In the **Roles and administrators** page, search for **Fabric Administrator (1)**, and click on it **(2)**.
+1. In the **Roles and administrators** page, search for **Fabric Administrator (1)**, and click on the roles **(2)**.
 
     ![search-fabric-admin](./Images/ws/Fab5.png)
 
@@ -34,13 +34,13 @@ In this task, you will assign yourself the **Fabric Administrator role** in Micr
 
     ![click-add-assignments](./Images/ws/Fab6.png)
 
-1. Ensure you **check the box (1)** next to your username, verify that it appears under **Selected (2)**, and then select **Add (3)** to complete the assignment.
+1. Ensure you **check the box (1)** next to the username, verify that it appears under **Selected (2)**, and then select **Add (3)** to complete the assignment.
 
     ![check-and-add-role](./Images/ws/Fab7.png)
 
-1. Confirm the **Fabric Administrator** role has been added by selecting **Refresh (1)** on the Fabric Administrators | Assignments page. Once the assignment is visible **(2)**, the role assignment is complete.
+1. Confirm the **Fabric Administrator** role has been added by selecting **Refresh (1)** on the **Fabric Administrators | Assignments** page. Once the assignment is visible **(2)**, the role assignment is complete.
 
-    ![check-and-navigate-back-to-home](./Images/ws/Fab8.png)
+    ![check-and-navigate-back-to-home](./Images/img-04.png)
 
 ### Task 2: Sign up for Microsoft Fabric Trial
 
@@ -60,35 +60,42 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 1. A new prompt will appear asking you to **Activate your 60-day free Fabric trial capacity**, click on **Activate**.
 
-    ![Account-manager-start](./Images/ff241.png)
+    ![Account-manager-start](./Images/fab-kynd-ex1-g6.png)
 
     > **Note:** The trial capacity region may differ from the one shown in the screenshot. No need to worry – simply use the default selected region, activate it, and continue to the next step.  
 
-1. Click on **Stay on current page** when prompted.
+1. On the **Successfully upgraded to Microsoft Fabric** pop-up, select **OK**.
 
-      ![Account-manager-start](./Images/fabric-2.png)
+    ![Account-manager-start](./Images/fab-kynd-ex1-g7.png)
 
-1. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
+1. On the **Invite teammates to try Fabric to extend your trial** pop-up, select **Close**.
 
-      ![Account-manager-start](./Images/lab1-image5.png)
+    ![Account-manager-start](./Images/fab-kynd-ex1-g8.png)
+
+1. Select the **Profile icon (1)** and verify the **Fabric and Power BI trial status (2)**.
+
+    ![Account-manager-start](./Images/fab-kynd-ex1-g9.png)
       
 ### Task 3: Create a workspace
 
 Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
-1. Now, select **Workspaces (1)** and click on **+ New workspace (2)**.
+1. Select **Workspaces (1)**, and then choose **+ New workspace (2)**.
 
-    ![New Workspace](./Images/f2.png)
+    ![New Workspace](./Images/fab-kynd-ex1-g10.png)
 
 1. Fill out the **Create a workspace** form with the following details:
- 
+
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**
- 
+   - **Advanced:** Expand it, under **License mode** select **Fabric (1)**, under **Capacity** select **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Region"></inject> (2)**, and then select **Apply (3)**.
+
       ![name-and-desc-of-workspc](./Images/f3.png)
  
-   - **Advanced:** Expand it and Under **License mode**, select **Fabric (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Region"></inject>(2)** and click on **Apply (3)** to create and open the workspace.
- 
-      ![advanced-and-apply](./Images/ws/Fab20.png)
+      ![advanced-and-apply](./Images/cop-fab-apr-gs-g5.png)
+
+1. On the **Introducing task flows** pop-up, select **Got it**.
+
+    ![.](./Images/cop-fab-apr-gs-g6.png)
 
 ## Task 4: Create a Lakehouse and upload files
 

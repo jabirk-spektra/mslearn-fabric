@@ -18,99 +18,82 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. Select your workspace, then select **+ New item** and choose **Notebook**. After a few seconds, a new notebook containing a single cell will open. Notebooks are made up of one or more cells that can contain code or markdown (formatted text).
+1. In the left pane, navigate to your **Workspace (1)** and click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then click on **+ New item (3)** to create a new **Data Flow Gen 2**.
 
-1. On the All items page, scroll down and select Lakehouse from Store data.
+    ![](./Images/fabricnav.png)
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/E1T1S3.png)
-   
-1. Enter the following details to create a Lakehouse.
+    ![](./Images/fabricnav2.png)
 
-   - **Name:** Enter **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>**
+1. Search for **Dataflow Gen2 (1)** and select **Dataflow Gen2 (2)**. Leave the name as default, and then click on **Create (4)**.
 
-   - Click on **Create**
+   ![New dataflow.](./Images/E5T1S2.png)
 
-1. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **ellipses** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
+   ![New dataflow.](./Images/dfsrcr.png)
 
-1. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+1. From the **Get data** pane, select **Import from a Text/CSV file**.
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded-files.png)
+   ![](./Images/Flow3.png)
 
-1. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left navigation pane, click on **+ New item (2)** to create a Dataflow.
+1. Create a new data source with the following settings:
 
-    ![](./Images/E1T1S2.png)
+    - **Link to file: (1)** Selected
+    - **File path or URL: (2)** `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
+    - **Connection: (3)** Create new connection
+    - **Connection Name: (4)** Connection
+    - **Data gateway: (5)** (none)
+    - **Authentication kind: (6)** Anonymous
+    - **Privacy level: (7)** None
+    - Click **Next (8)**
 
-1. Search for **Dataflow Gen2 (1)** and select **Dataflow Gen2 (2)**.
-Leave the name as default, **Uncheck (3)** the Enable Git integration, deployment pipelines and Public API scenarios, and then click on **Create (4)**.
+      ![](./Images/e8t1p2.png)
 
-   ![](./Images/Fab21.png)
+1. Preview the file data, and then click **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown below:
 
-   ![](./Images/Fab22.png)
+   ![Query in the Power Query editor.](./Images/e8t1p3.png)
 
-1. Select **Get data**, select **Test/CSV** and create a new data 1. 
+1. Select the **Add column  (1)** tab on the toolbar ribbon. Then, choose **Custom column (2)** and create a new column with Name **MonthNo (3)** and enter the formula **Date.Month([OrderDate]) (4)** in the **Custom column formula** box and then click **OK (5)**.
 
-   ![](./Images/Fab23.png)
+   ![](./Images/e8t1p4.png)
 
-Create a new data source with the following settings:
+   ![](./Images/e8t1p5.png)
 
-   - **Link to file: (1)** Selected
-   - **File path or URL: (2)** `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
-   - **Connection: (3)** Create new connection
-   - **Connection Name: (4)** Connection
-   - **data gateway: (5)** (none)
-   - **Authentication kind: (6)** Anonymous
-   - **Privacy level: (7)** None
-   - Click **Next (8)**
+1. The step to add the custom column is added to the query, and the resulting column is displayed in the data pane:
 
-      ![](./Images/Fab24.png)
-
-1. Preview the file data, and then **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown below:
-
-   ![Query in the Power Query editor.](./Images/fabric23.png)
-
-1. Select the **Add column (1)** tab on the toolbar ribbon.Then, choose **Custom column (2)**.
-
-   ![](./Images/Fab25.png)
-
-1. Now create a new column named **MonthNo (1)** using the formula `Date.Month([OrderDate])`**(2)**.And click on **OK (3)**.
-
-   ![Custom column in Power Query editor.](./Images/fabric24.png)
-
-1. The step to add the custom column is added to the query and the resulting column is displayed in the data pane:
-
-   ![Query with a custom column step.](./Images/lak4.png)
+   ![](./Images/e8t1p6.png)
 
 ### Task 2: Add data destination for Dataflow
 
 In this task, you’ll add a data destination for the Dataflow to determine where the ingested and transformed data will be stored for future use.
 
-1. From the bottom right corner, choose **Lakehouse** from the **Add data destination** drop-down menu.
+1. Switch to your Dataflow window. In the **Query settings** in the right pane, click on **+ (1)** for Data Destination, then choose **Lakehouse (2)** from the menu.
 
-   ![Empty data pipeline.](./Images/35.png)
+   ![Empty data pipeline.](./Images/Flow6.png)
+
+   >**Note:** If the Query settings pane isn't visible, go to the top ribbon, select **Query (1)**, then click **Add data destination (2)** and choose **Lakehouse (3)**.
+
+   ![Empty data pipeline.](./Images/lakedest.png)
 
    >**Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
-2. In the **Connect to data destination** dialog box, make sure **Create a new connection (1)** is selected and the **<inject key="AzureAdUserEmail"></inject> (2)** account is signed in and then click on **Next (3)**.
+1. In the **Connect to data destination** dialog box, make sure **Create a new connection (1)** is selected and the **<inject key="AzureAdUserEmail"></inject> (2)** account is signed in and then click on **Next (3)**.
 
-   ![](./Images/Fab26.png)
+   ![](./Images/E8T2S2.png)
 
-4. In the **Choose destination target** window, select the **fabric-<inject key="DeploymentID" enableCopy="false"/>** Workspace. Select the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** then specify the new table name as **orders (2)**, then click **Next (3)**.
+1. In the **Choose destination target** window, select the **fabric-<inject key="DeploymentID" enableCopy="false"/>** Workspace. Select the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** then specify the new table name as **orders (2)**, then click **Next (3)**.
 
-   ![Data destination configuration page.](./Images/fabric26.png)
+   ![Data destination configuration page.](./Images/img-05.png)
 
-5. On the Destination settings page, observe that **MonthNo** is not selected in the Column mapping, and an informational message is displayed.
+1. On the Destination settings page, observe that **MonthNo** is not selected in the Column mapping, and an informational message is displayed.
  
-6. On the Destination settings page, toggle **off (1)** the **Use Automatic Settings** option. Then, for the **MonthNo** column header, change the **Source Type** to **Whole number (2)**. Now, click on **Save settings (3)**.
+1. On the Destination settings page, toggle **off (1)** the **Use Automatic Settings** option. Then, for the **MonthNo** column header, change the **Source Type** to **Whole number (2)**. Now, click on **Save settings (3)**.
+   
+   ![Data destination settings page.](./Images/e8t2p2.png)
 
-    ![Data destination settings page.](./Images/Fab27.png)
+1. Click on the **Dataflow 2 (1)** on the top left, and rename the dataflow as **Transform Orders Dataflow (2)**.
 
-5. Click on the **Dataflow 2 (1)** on the top left, and rename the dataflow as **Transform Orders Dataflow (2)**.
+   ![](./Images/E8T2S6.png)
 
-   ![](./Images/Fab28.png)
-
-6. Select **Publish** from the bottom right corner to publish the dataflow. Then wait for the **Dataflow** to be created in the workspace.
-
-   ![](./Images/Fab29.png)
+1. Select **Home** tab, and click on **Save and Run**.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -123,41 +106,47 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
 In this task, you’ll add a dataflow to a pipeline to streamline the data processing workflow and enable automated data transformations.
 
-1. In the left pane, navigate to your **Workspace (1)** and click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then click on **+ New item (3)** to create a new **Data Flow Gen 2**.
+1. In the left pane, navigate to your **Workspace (1)** and click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then click on **+ New item (3)**.
 
-    ![](./Images/Fab30.png)
+    ![](./Images/fabricnav.png)
 
-    ![](./Images/Fab31.png)
+    ![](./Images/fabricnav2.png)
 
 1. In the Search box, search for **Pipeline (1)**, and select **Pipeline (2)**.
 
-   ![](./Images/Fab32.png)
+   ![](./Images/E1T4S2.png)
 
-1. Set the Name as **Load Orders pipeline (1)** and click on **Create (2)**. This will open the pipeline editor.
+1. Set the Name as **Load Orders pipeline (1)** and click on **Create (3)**. This will open the pipeline editor.
 
-   ![](./Images/Fab33.png)
+   ![](./Images/img-06.png)
 
    > **Note:** If the Copy Data wizard opens automatically, close it!
 
-1. Select **pipeline activity**, and add a **Dataflow** activity to the pipeline.
+1. In the **Build a data pipeline to organize and move your data** window, click on **Pipeline activity (1)**, and select **Dataflow (2)** activity to the pipeline.
 
-   ![Empty data pipeline.](./Images/dataflow_1.png)
+   ![Empty data pipeline.](./Images/E8t3S4.png)
 
-1. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab which is at the bottom of the page. In the **Dataflow** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/>** or my workspace (2) and select **Transform Orders Dataflow (3)** 
+1. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in the **Dataflow** drop-down list, select **Transform Orders Dataflow (3)** (the data flow you created previously).
 
-   ![Empty data pipeline.](./Images/transform.png)
+   ![Empty data pipeline.](./Images/e8t3p2.png)
    
-1. **Save** the pipeline from the top left corner.
+1. Select **Save** from the top-left corner to save the pipeline.
 
-1. Use the **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
+   ![](./Images/Flow11.png)
 
-   ![Pipeline with a dataflow that has completed successfully.](./Images/lak8.png)
+1. Use the **Run** button to run the pipeline then click on **Save and Run**, and wait for it to complete. It may take a few minutes.
 
-1. In the menu bar on the left edge, select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>**
+   ![](./Images/Flow12.png)
+   
+   ![09](./Images/fab-ric-ex1-g15.png)
+   
+   ![](./Images/prun.png)
+
+1. Navigate to your **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** Lakehouse.
 
 1. Expand the **Tables** section and select the **orders** table created by your dataflow.
 
-   ![Table loaded by a dataflow.](./Images/orders_1.png)
+   ![Table loaded by a dataflow.](./Images/pop.png)
 
    >**Note:** You might have to refresh the browser to get the expected output.
 
