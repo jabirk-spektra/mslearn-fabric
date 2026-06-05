@@ -394,36 +394,41 @@ While it's useful to be able to embed SQL statements into a cell containing PySp
 
         > **Note**: For more information about Spark SQL and dataframes, see the [Spark SQL documentation](https://spark.apache.org/docs/2.2.0/sql-programming-guide.html).
 
-### Task 8: Visualize data with Spark
+### Task 8: Visualize Data with Spark
 
-In this task, you will visualize data using Spark to enhance understanding and insights through graphical representation. While Fabric notebooks offer a basic chart view for data from dataframes or Spark SQL queries, you can utilize Python graphics libraries like **matplotlib** and **seaborn** for more comprehensive and customized charting.
+In this task, you will visualize data using Spark to gain insights through graphical representations. Fabric notebooks can automatically generate charts from query results, allowing you to quickly analyze and explore your data.
 
-#### View results as a chart
+#### View Results as a Chart
 
-1. Add a new code cell to the notebook, and enter the following code in it:
+1. Add a new code cell to the notebook and enter the following code:
 
-    ```SQL
+   ```sql
    %%sql
    SELECT * FROM salesorders
-    ```
+   ```
 
-2. Run the code and observe that it returns the data from the **salesorders** view you created previously.
+2. Run the cell and verify that the query returns data from the **salesorders** table.
 
-3. We need to change the view from table to chart in the results section beneath the cell. To do so we will first need to turn off the new visualization option. Click on **...** and then **New visualization** to turn it off. Then click on **Chart**.
+3. In the results pane, select **+ New chart** to create a visualization from the query results.
 
-   ![](./Images/L6T9S3.png) 
+   ![](./Images/ANA0.png)
 
-4. Use the **Customize Chart** button at the top right of the chart to display the options pane for the chart. Then set the options as follows and select **Apply**.
-    - **Chart type**: Bar chart
-    - **Key**: Item
-    - **Values**: Quantity
-    - **Series Group**: *leave blank*
-    - **Aggregation**: Sum
-    - **Stacked**: *Unselected*
+4. From the suggested visualizations pane, select a chart and click **Start editing**.
 
-5. Verify that the chart looks similar to this:
+   ![](./Images/ANA1.png)
 
-    ![Screenshot of a bar chart of products by total order quantiies](./Images/chart_final_1.png)
+5. In the **Chart settings** pane, configure the chart using the following settings:
+
+   - **Chart type (1):** Bar chart
+   - **Series group (2):** Leave blank
+   - **Aggregation (3):** Sum
+   - **Stacked (4):** Disabled
+
+      ![](./Images/ANA2.png)
+
+6. Review the generated chart and verify that the visualization displays the summarized sales data correctly.
+
+    > **Note:** Depending on the Fabric experience and dataset, the suggested chart and available chart settings may vary slightly. If a suggested chart is not displayed, select **Build my own** and configure the chart manually using the settings above.
 
 #### Get started with **matplotlib**
 
