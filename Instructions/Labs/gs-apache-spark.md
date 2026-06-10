@@ -64,7 +64,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab. Here, you will find the Azure credentials. Click on the **Environment** option to verify the credentials.
  
-  ![08](./Images2/l1-env.png)
+  ![08](./Images2/env-tab.png)
  
 ## Utilizing the Split Window Feature
  
@@ -112,7 +112,9 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![05](./Images2/lab1-11-2.png)
 
-1. You will be navigated to the PowerBI Home page and click on the **powerBI icon** on bottom-left corner
+1. You will be navigated to the PowerBI Home page and click on the **powerBI icon** on bottom-left corner.
+
+   >**Note**: After sign in you get any pop-up saying that the **Microsoft Fabric (Free) license assigned** then click on **ok**.
 
    ![05](./Images2/power-bi-HPage.png) 
 
@@ -150,13 +152,12 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
       ![08](./Images2/lab1-11-5.png)
 
-1. In the **Create a workspace** dialog box, enter the name as **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)**, then click **Apply (2)** to create the workspace.
+1. In the **Create a workspace** dialog box, enter the name as **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)**, then scroll down to check the workspace type options.
+     ![08](./Images2/worspace-name.png)
 
-     ![08](./Images2/namespace.png)
+1. Make sure to select workspace type as **Fabric (1)** and in details select **fabric<inject key="DeploymentID" enableCopy="false"/>**  **(2)** and click on **Apply. (3)**
 
-1. Make sure to select workspace type as **Fabric (1)** and in details select **fabric<inject key="DeploymentID" enableCopy="false"/> - West US 3**  **(2)** and click on **Apply (3)**
-
-   ![](./Images2/workspace-fabric.png)
+   ![](./Images2/workspace-select.png)
    
 1. When your new workspace opens, it should appear empty, as shown in the image.
 
