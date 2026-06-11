@@ -4,13 +4,13 @@
 
 ## 📘 Scenario
 
-Contoso Retail’s analytics team now needs to organize and analyze sales data within a structured data warehouse environment. To support business reporting and performance analysis, the team must create warehouse tables, define relationships between datasets, and build reusable analytical queries and reports.
+Contoso Retail’s analytics team now needs to organize and analyze sales data within a **structured data warehouse environment**. To support business reporting and performance analysis, the team must create warehouse tables, define relationships between datasets, and build reusable analytical queries and reports.
 
 In this exercise, you will help Contoso create a data warehouse, populate fact and dimension tables, build a relational data model, analyze sales data using SQL and visual queries, and create reports for business insights.
 
 ## 📖 Overview
 
-In this exercise, you will use Microsoft Fabric to create and analyze a relational data warehouse. You will create warehouse tables, load sample data, define relationships between fact and dimension tables, run SQL queries for analysis, create reusable views, and build visual reports using the semantic model and reporting capabilities in Microsoft Fabric. This will enable you to derive insights from the data and support data-driven decision-making for Contoso Retail.
+In this exercise, you will use Microsoft Fabric to **create and analyze a relational data warehouse**. You will create warehouse tables, load sample data, define relationships between fact and dimension tables, run SQL queries for analysis, create reusable views, and build visual reports using the semantic model and reporting capabilities in **Microsoft Fabric**. This will enable you to derive insights from the data and support data-driven decision-making for Contoso Retail.
 
 ## 🎯 Objectives
 
@@ -42,7 +42,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 
     - Click on **Create (2)**
 
-      ![01](./Images/e2t1s3.png)
+      ![01](./Images/02/E2T1S3-1006.png)
 
 ## Task 2: Create tables and insert data
 

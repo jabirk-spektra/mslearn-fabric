@@ -4,13 +4,13 @@
 
 ## 📘 Scenario
 
-Contoso Retail’s data engineering team needs to process and analyze large volumes of sales order data using Apache Spark in Microsoft Fabric. To support analytics workloads, the team plans to structure, transform, store, query, and visualize sales data using Spark notebooks and Lakehouse capabilities.
+Contoso Retail’s **Data Engineering** team needs to process and analyze large volumes of sales order data using **Apache Spark in Microsoft Fabric**. To support analytics workloads, the team plans to structure, transform, store, query, and visualize sales data using Spark notebooks and Lakehouse capabilities.
 
 In this exercise, you will help Contoso create a Lakehouse, load sales order files into Spark DataFrames, perform data exploration and transformations, save processed data to Parquet and Delta formats, query data using Spark SQL, and visualize business insights using Spark charts, Matplotlib, and Seaborn.
 
 ## 📖 Overview
 
-In this exercise, you will use Apache Spark and PySpark in Microsoft Fabric to analyze and process sales order data. You will create a Lakehouse and notebook, load and structure CSV data using schemas, explore and aggregate data with Spark dataframes, transform and save data in optimized formats, create Delta tables, query data using SQL, and generate visualizations using Spark charts and Python visualization libraries. This hands-on experience will help you understand how to leverage Spark's distributed computing capabilities for large-scale data analysis and gain insights from sales data in Microsoft Fabric.
+In this exercise, you will use **Apache Spark and PySpark** in Microsoft Fabric to analyze and process sales order data. You will create a Lakehouse and notebook, load and structure CSV data using schemas, explore and aggregate data with Spark dataframes, transform and save data in optimized formats, create Delta tables, query data using SQL, and generate visualizations using Spark charts and Python visualization libraries. This hands-on experience will help you understand how to leverage Spark's distributed computing capabilities for large-scale data analysis and gain insights from sales data in Microsoft Fabric.
 
 ## 🎯 Objective
 
@@ -164,7 +164,7 @@ In this task, you will load data into a dataframe to prepare it for analysis. Da
    display(df)
     ```
 
-1. Re-run the cell and review the output, which should look similar to this:
+1. Run the cell and review the output, which should look similar to this:
 
    | Index | _c0 | _c1 | _c2 | _c3 | _c4 | _c5 | _c6 | _c7 | _c8 |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -213,7 +213,7 @@ In this task, you will load data into a dataframe to prepare it for analysis. Da
     display(df)
     ```
 
-1. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a \* wildcard to read the sales order data from all of the files in the **orders** folder:
+1. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a **\*** wildcard to read the sales order data from all of the files in the **orders** folder:
 
     ```python
     from pyspark.sql.types import *

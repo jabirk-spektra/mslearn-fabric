@@ -61,7 +61,7 @@ In this task, you will create a Fabric workspace. The workspace will contain all
 
     - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**
 
-        >Note: The name may appear as a space between **fabric-** and the **unique ID**, but ideally, it does not have any spaces. Please make sure to remove any spaces while entering the name.
+        > **Note:** The name may appear as a space between **fabric-** and the **unique ID**, but ideally, it does not have any spaces. Please make sure to remove any spaces while entering the name.
 
     - Expand the **Advanced (2)** section.
 
@@ -120,10 +120,10 @@ In this task, switch to the Data engineering experience and create a new Lakehou
     - **Location:** **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**
     
     - **Lakehouse Scehmas:** **Unchecked (3)**
+        
         > **Note:** Make sure to uncheck the Lakehouse schemas while creating the Lakehouse, as checking it would cause issues in the later exercises. 
 
         ![](./Images/01/E1T3S5-2005.png) 
-
 
 1. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the left pane, click the **Ellipsis (...) (1)** menu for the **Files** node, click on **New subfolder (2)**.
     
@@ -257,7 +257,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
    ![](./Images/p1t4p10(12).png)
 
-1. In the **Explorer** pane, expand **new_data (1)** and select **sales.csv (2)** to open the file.  
+1. In the **Explorer** pane, expand **new_data (1)** and select **sales.csv (2)** to open the file to verify the data is loaded.  
 
    ![](./Images/p1t4p10(13).png)
 
@@ -299,7 +299,9 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
    ![11](./Images/01/Pg3-Notebook-S2.png) 
 
-    > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
+    > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take few minutes to complete.
+
+    > **Note:** If the Spark pool session remains in the **Starting session**... state for more than 7–8 minutes, it is likely that the workspace Spark metadata has become corrupted, preventing the session from starting successfully. In this scenario, create a **new workspace** and repeat the lab steps starting from Task 2.
 
 1. In the **Ellipsis (...) (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
@@ -367,10 +369,11 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
 In this task, you'll use SQL to query tables in a database. You'll write statements to retrieve, filter, and manipulate data, helping you analyze the dataset and build your SQL skills.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint (1)**.
+1. At the top-right of the Lakehouse page, switch from **Analyze data with (1)** to **SQL analytics endpoint (2)**.
 
-    ![.](./Images/Lake19.png)
-    > **Note**:Please wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables
+    ![.](./Images/01/E1T6S1-1006.png)
+
+    > **Note**: Please wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables
 
 1. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
@@ -435,11 +438,11 @@ In this task, you'll create a report to visualize your data findings. You'll sel
 
 2. On the New Smantic Model window, enter the following details and click on **Confirm (4)**:
 
-    - DIrect Lake semantic model name: **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**
+    - Direct Lake semantic model name: **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**
     - Storage mode: **Direct Lake on SQL (2)**
     - Select the sales table to be included in the model **(3)**
 
-    ![](./Images/01/E1T8S2-2005.png)
+        ![](./Images/01/E1T8S2-2005.png)
 
 3. Go back to the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the left pane. Select recently created semantic model named as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**
 

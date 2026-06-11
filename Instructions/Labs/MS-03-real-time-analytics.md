@@ -4,13 +4,13 @@
 
 ## 📘 Scenario
 
-Contoso Retail’s analytics team now requires real-time visibility into operational and sales data to support faster business analysis and monitoring. To achieve this, the team plans to use Real-Time Analytics capabilities in Microsoft Fabric for querying live and historical data streams.
+Contoso Retail’s analytics team now requires **real-time visibility into operational and sales data** to support faster business analysis and monitoring. To achieve this, the team plans to use **Real-Time Analytics** capabilities in Microsoft Fabric for querying live and historical data streams.
 
 In this exercise, you will help Contoso create a KQL database, ingest sales data for analysis, run KQL queries to extract insights, build reports from query results, and simulate streaming IoT device data using Delta tables and Spark Structured Streaming.
 
 ## 📖 Overview
 
-In this exercise, you will explore Real-Time Analytics capabilities in Microsoft Fabric using Kusto Query Language (KQL). You will create a KQL database, ingest and query sales data, create a Power BI report from KQL query results, and use Delta tables with Spark Structured Streaming to process simulated streaming data in real time.
+In this exercise, you will explore **Real-Time Analytics capabilities** in Microsoft Fabric using Kusto Query Language (KQL). You will create a KQL database, ingest and query sales data, create a Power BI report from KQL query results, and use Delta tables with Spark Structured Streaming to process simulated streaming data in real time.
 
 ## 🎯 Objectives
 

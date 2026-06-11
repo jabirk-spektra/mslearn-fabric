@@ -4,11 +4,11 @@
 
 ## 📘 Scenario
 
-Contoso Retail’s analytics team wants to explore machine learning techniques to better understand customer churn patterns. To support this initiative, the team plans to use Microsoft Fabric notebooks and MLflow to train, compare, and track machine learning models using customer churn data.
+Contoso Retail’s analytics team wants to explore **machine learning techniques** to better understand customer churn patterns. To support this initiative, the team plans to use **Microsoft Fabric notebooks and MLflow** to train, compare, and track machine learning models using customer churn data.
 
 ## 📖 Overview
 
-In this exercise, you will use notebooks in Microsoft Fabric to build a machine learning workflow. You will upload and load churn data into a dataframe, train classification models using Scikit-Learn, track experiments with MLflow, compare model performance, and save the best-performing model for future predictions.
+In this exercise, you will use notebooks in Microsoft Fabric to build a **machine learning workflow**. You will upload and load churn data into a dataframe, train classification models using Scikit-Learn, track experiments with **MLflow**, compare model performance, and save the best-performing model for future predictions.
 By the end of this exercise, you will have hands-on experience in using Microsoft Fabric notebooks for data science tasks, including data preparation, model training, experiment tracking, and model management.
 
 ## 🎯 Objectives

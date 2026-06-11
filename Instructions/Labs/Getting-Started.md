@@ -8,7 +8,6 @@
 
 As a **Data Engineer/Analyst** at Contoso, you will build an end-to-end analytics solution using **Microsoft Fabric**. Throughout this lab, you will create fabric workspace, ingest and transform data, analyze business insights, enable real-time analytics, and use machine learning and Apache Spark to support Contoso’s enterprise analytics initiatives.
 
-
 ## 📖 Lab Overview
 
 In this hands-on lab, you will use **Microsoft Fabric** to work with enterprise-scale analytics and data processing solutions. You will explore **key Fabric capabilities** including data ingestion, data warehousing, real-time analytics, machine learning, Apache Spark, and Dataflow Gen2.
@@ -64,7 +63,7 @@ The architecture for this lab involves several key components of Microsoft Fabri
 
 ## 🚀 Getting Started with the Lab
  
-Welcome to your MS Fabric Foundation for Enterprise Analytics workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
@@ -139,7 +138,7 @@ To adjust the zoom level for the environment page, click the A↕ : 100% icon lo
 
 ## 📞 Support Contact
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The **CloudLabs support team** is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
 Learner Support Contacts:
 
