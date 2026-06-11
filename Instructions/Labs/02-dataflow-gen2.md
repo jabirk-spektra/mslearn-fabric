@@ -19,7 +19,9 @@ In this exercise, you will create and manage Dataflows (Gen2) within Microsoft F
 You will be able to complete the following tasks:
 
 - Task 1: Create a Dataflow (Gen2) to ingest data
+
 - Task 2: Add data destination for Dataflow
+
 - Task 3: Add a dataflow to a pipeline
 
 ## Task 1: Create a Dataflow (Gen2) to ingest data
@@ -28,13 +30,13 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
 1. From the left pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)** workspace then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
 
-    ![](./Images2/2/e2-t2-7.png)
+    ![](./Images2/fabric-workspace.png)
 
 1. In the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, click on **+ New item (1)**, then in the right pane, search for **Dataflow Gen2 (2)** in the search bar, and select **Dataflow Gen2 (3)** under the **Get data** section.
 
      ![](./Images2/lab3-11-02.png)
 
-1. In the New Dataflow Gen2 dialog, keep the **Name (1)** as default and click **Create (2)** to proceed.
+1. In the New Dataflow Gen2 (CI/CD) dialog, keep the **Name (1)** as default and click **Create (2)** to proceed.
 
     ![](./Images2/2/e2-t1-3.png)
 
@@ -85,7 +87,7 @@ In this task, you will add a data destination for the Dataflow to determine wher
 
 1. From the left pane, expand the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then select the **dbo (2)** under **fabric-lakehouse<inject key="DeploymentID" enableCopy="false"/>** table. The Table name field will automatically populate with **orders (3)**. Click **Next (4)** to continue.
 
-    ![](./Images2/2/e2-t2-des-target.png)
+    ![](./Images2/2/destination-target-orders.png)
 
 1. On the **Choose Destination settings** page, toggle **off** the **use automatic settings (1)** option. Then, for the **MonthNo** column header, set the **Source type** to **Whole number (2)**. Finally, click **Save settings (3)** to apply the changes.
 
@@ -93,11 +95,11 @@ In this task, you will add a data destination for the Dataflow to determine wher
 
 1. Click the **Save & run (3)** button under **save (2)** dropdown located in the top-left corner of the **Home (1)** ribbon to apply your destination and execute the dataflow.
 
-    ![save the changes](./Images2/2/e2-t2-5.png)
+    ![save the changes](./Images2/2/dataflow-save.png)
 
 1. Once published, click on the **ellipsis (...) (2)** next to the published **Dataflow (1)** in the workspace, select **Settings (3)**, 
 
-    ![](./Images2/2/e2-t2-6-1.png)
+    ![](./Images2/2/dataflow-settings.png)
 
 1. Rename the dataflow as **Transform Orders Dataflow (1)** and click on **X** to close.
 
@@ -109,7 +111,7 @@ In this task, you will add a dataflow to a pipeline to streamline the data proce
 
 1. From the left pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/> workspace (1)**, then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
 
-     ![](./Images2/e2-t2-7.png)
+     ![](./Images2/fabric-workspace.png)
 
 1. In the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, click on **+ New item (1)**, then in the right pane, search for **Pipeline (2)** in the search bar, and select **Pipeline (3)** under the **Get data** section.
 
